@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+// Variáveis
+$cor-preta: #000;
+$cor-branca: #fff;
+$cor-vermelha: #ff0000;
+$cor-cinza: #585858;
+
+// mixins
+@mixin flex(
+  $direction: row,
+  $align: stretch,
+  $justify: start,
+  $gap: 0,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}

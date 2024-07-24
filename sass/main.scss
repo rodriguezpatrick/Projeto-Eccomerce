@@ -1,23 +1,21 @@
 @charset "UTF-8";
 
-// 1. Vendors
-@use 'vendors/normalize';
+// 1.Configuration and helpers
+@import "abstracts/auxiliares";
 
-// 2. Base stuff
-@use 'base/base';
-@use 'base/fonts';
-@use 'base/helpers';
-@use 'base/typography';
+// 2. Vendors
+@import 'vendors/normalize';
 
-// 3. Layout-related sections
-@use 'layout/footer';
-@use 'layout/header';
+// 3. Base stuff
+@import 'base/base';
 
-// 4. Components
-@use 'components/button';
+// 4. Layout-related sections
+@import 'layout/footer';
+@import 'layout/header';
 
-// 5. Pages
-@use 'pages/home';
+// 5. Components
+// @import 'components/button';
 
-// 6. Themes
-@use 'themes/default';
+// 6. Pages
+@import 'pages/home';
+

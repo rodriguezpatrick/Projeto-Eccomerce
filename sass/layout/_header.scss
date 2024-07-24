@@ -1,3 +1,109 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+.cabecalho{
+    @include flex($align: center, $justify: space-between);
+    position: relative;
+    padding: 3.12rem 2.5rem;
+    background-color: $cor-branca;
+    &__container{
+        @include flex($align: end, $gap: 6.1rem)
+    }
+    &__logo{
+        width: 15rem;
+        margin-bottom: 2px;
+    }
+    // &__navegacao{
+    // }
+    &__lista{
+        @include flex($gap: 2rem);
+        list-style-type: none;
+    }
+    &__link{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $cor-preta;
+        border-bottom: solid 2px transparent;
+        &--ofertas{
+            color: $cor-vermelha;
+            border-bottom: solid 2px transparent;
+            // &:hover{
+            //     border-bottom: solid 2px $cor-vermelha;
+            // }
+        }
+        &:hover{
+            border-bottom: solid 2px currentColor;
+        }
+    }
+    &__icones{
+        @include flex($align: center, $gap: 1rem)
+    }
+    &__icone{
+        color: $cor-preta;
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.cabecalho-escondido{
+    @include flex($align: start, $gap: 2.5rem);
+    position: absolute;
+    background-color: $cor-branca;
+    padding: 3.12rem 2.5rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 100%;
+    // box-shadow: 0 0 1rem 1rem $cor-cinza;
+
+    &__tipo{
+        @include flex($direction: column, $gap:2rem)
+    }
+    &__titulos{
+        @include flex($gap: 3rem);
+        list-style: none;
+    }
+    &__titulo{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        color: $cor-preta;
+        font-weight: 500;
+    }
+    &__conteudos{
+        @include flex($direction: column, $wrap: wrap, $gap: 1.02rem);
+    }
+    &__conteudo{
+        list-style: none;
+        color: $cor-cinza;
+        text-decoration: none;
+        border-bottom: solid 1px transparent;
+        &:hover{
+            border-bottom: solid 1px currentColor;
+        }
+        &--decorado{
+            text-decoration: underline;
+            &:hover{
+                border-bottom: solid 1px transparent;
+            }
+        }
+    }
+    &__imagem{
+        width: 30rem;
+
+    }
+}
+
+.pesquisa{
+    @include flex();
+    &__container{
+        border-bottom: solid 1px $cor-preta;
+    }
+    &__input{
+        
+        border: none;
+    }
+    &__icone{
+        color:$cor-preta;
+        width: 2rem;
+        height: 2rem;
+    }
+}
