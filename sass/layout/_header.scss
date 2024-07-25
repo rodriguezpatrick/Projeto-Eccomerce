@@ -1,109 +1,218 @@
-.cabecalho{
-    @include flex($align: center, $justify: space-between);
-    position: relative;
-    padding: 3.12rem 2.5rem;
-    background-color: $cor-branca;
-    &__container{
-        @include flex($align: end, $gap: 6.1rem)
+.cabecalho {
+  @include flex($align: center, $justify: space-between);
+  position: relative;
+  padding: 0 2.5rem;
+  background-color: $cor-branca;
+  &__container {
+    @include flex($align: center, $gap: 6.1rem);
+  }
+  &__logo {
+    width: 15rem;
+    margin-bottom: 2px;
+  }
+  &__lista {
+    @include flex($gap: 2rem);
+    list-style-type: none;
+  }
+  &__link {
+    font-size: 1.33rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: inherit;
+    line-height: 1;
+    border-bottom: solid 2px transparent;
+    &:hover {
+      border-bottom: solid 2px currentColor;
     }
-    &__logo{
-        width: 15rem;
-        margin-bottom: 2px;
-    }
-    // &__navegacao{
-    // }
-    &__lista{
-        @include flex($gap: 2rem);
-        list-style-type: none;
-    }
-    &__link{
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 600;
-        color: $cor-preta;
-        border-bottom: solid 2px transparent;
-        &--ofertas{
-            color: $cor-vermelha;
-            border-bottom: solid 2px transparent;
-            // &:hover{
-            //     border-bottom: solid 2px $cor-vermelha;
-            // }
-        }
-        &:hover{
-            border-bottom: solid 2px currentColor;
-        }
-    }
-    &__icones{
-        @include flex($align: center, $gap: 1rem)
-    }
-    &__icone{
-        color: $cor-preta;
-        width: 2rem;
-        height: 2rem;
-    }
-}
 
-.cabecalho-escondido{
-    @include flex($align: start, $gap: 2.5rem);
+    &-icone {
+      @include flex($justify: center, $align: center);
+      // eu adicionei esse flex aqui e voltou a funcionar o hover. nao sei o por que. Lembro que havia parado de funcionar da primeira vez assim que eu adicinei um conteiner no icone de usuario e icone de sacola
+      color: inherit;
+      text-decoration: none;
+      transition: transform ease-in 200ms;
+      &:hover {
+        color: $cor-vermelha;
+        transform: scale(1.1);
+      }
+      &--logado {
+        & .cabecalho__icone {
+          display: none;
+          &--logado {
+            display: block;
+          }
+        }
+      }
+    }
+    &--ofertas {
+      color: $cor-vermelha;
+      border-bottom: solid 2px transparent;
+    }
+    &--perfil {
+      text-transform: none;
+      font-weight: 400;
+      border-bottom: none;
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__item-lista {
+    padding: 3.12rem 0;
+    &:hover {
+      border-bottom-color: currentColor;
+      & .cabecalho-escondido {
+        @include flex($display: flex, $align: start, $gap: 2.5rem);
+      }
+    }
+  }
+
+  &__icones {
+    @include flex($align: center, $gap: 1rem);
+  }
+
+  &__icone {
+    color: inherit;
+    fill: currentColor;
+    width: 2rem;
+    height: 2rem;
+    &--menor {
+      width: 1.6rem;
+      transition: transform ease-in 200ms;
+    }
+
+    &--logado {
+      display: none;
+      width: 2rem;
+      height: 2rem;
+      fill: transparent;
+      stroke: currentColor;
+    }
+  }
+  &__icone-carrinho-container {
+    position: relative;
+    width: 1.6rem;
+    height: 2rem;
+  }
+  &__numero-itens {
+    @include flex($align: center, $justify: center);
+    // display: none;
+    font-size: 1.11rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(55%, -55%);
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.82rem;
+    border-radius: 50%;
+    background-color: $cor-vermelha;
+    color: $cor-branca;
+  }
+  &__icone-login-container {
+    position: relative;
+  }
+  &__informacoes-perfil {
+    @include flex($direction: column, $gap: 1.28rem);
     position: absolute;
     background-color: $cor-branca;
-    padding: 3.12rem 2.5rem;
-    width: 100%;
-    left: 0;
     right: 0;
-    top: 100%;
-    // box-shadow: 0 0 1rem 1rem $cor-cinza;
-
-    &__tipo{
-        @include flex($direction: column, $gap:2rem)
+    padding: 2.5rem 2rem;
+    width: 15rem;
+    box-shadow: 0 0 1rem rgba($cor-preta, 10%);
+    border-radius: 0.5rem;
+    transform: translate(2%, 10%);
+    &--aberto {
+      display: flex;
     }
-    &__titulos{
-        @include flex($gap: 3rem);
-        list-style: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 100%;
+      right: 0;
+      border: solid 1rem transparent;
+      border-bottom-color: rgba($cor-preta, 30%);
+      transform: translate(-119%, -100%);
     }
-    &__titulo{
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: sans-serif;
-        color: $cor-preta;
-        font-weight: 500;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 100%;
+      right: 0;
+      border: solid 1rem transparent;
+      border-bottom-color: $cor-branca;
+      transform: translate(-119%, -99%);
     }
-    &__conteudos{
-        @include flex($direction: column, $wrap: wrap, $gap: 1.02rem);
-    }
-    &__conteudo{
-        list-style: none;
-        color: $cor-cinza;
-        text-decoration: none;
-        border-bottom: solid 1px transparent;
-        &:hover{
-            border-bottom: solid 1px currentColor;
-        }
-        &--decorado{
-            text-decoration: underline;
-            &:hover{
-                border-bottom: solid 1px transparent;
-            }
-        }
-    }
-    &__imagem{
-        width: 30rem;
-
-    }
+    // como esse elemento nao tem conteudo no meio entao a borda fica em formato triangular
+  }
+  &__uppercase {
+    text-transform: uppercase;
+  }
 }
 
-.pesquisa{
-    @include flex();
-    &__container{
-        border-bottom: solid 1px $cor-preta;
+.cabecalho-escondido {
+  @include flex($display: none, $align: start, $gap: 2.5rem);
+  position: absolute;
+  background-color: $cor-branca;
+  padding: 3.12rem 2.5rem;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 100%;
+  box-shadow: 0 0 0.1rem rgba($cor-preta, 10%);
+
+  &__tipo {
+    @include flex($direction: column, $gap: 2rem);
+  }
+  &__titulos {
+    @include flex($gap: 3rem);
+    list-style: none;
+  }
+  &__titulo {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: $cor-preta;
+    font-weight: 500;
+  }
+  &__conteudos {
+    @include flex($direction: column, $wrap: wrap, $gap: 1.02rem);
+  }
+  &__conteudo {
+    list-style: none;
+    color: $cor-cinza;
+    text-decoration: none;
+    border-bottom: solid 1px transparent;
+    &:hover {
+      border-bottom: solid 1px currentColor;
     }
-    &__input{
-        
-        border: none;
+    &--decorado {
+      text-decoration: underline;
+      &:hover {
+        border-bottom: solid 1px transparent;
+      }
     }
-    &__icone{
-        color:$cor-preta;
-        width: 2rem;
-        height: 2rem;
-    }
+  }
+  &__imagem {
+    width: 30rem;
+  }
+}
+
+.pesquisa {
+  @include flex();
+  &__container {
+    border-bottom: solid 1px $cor-preta;
+  }
+  &__input {
+    border: none;
+  }
+  &__icone {
+    color: $cor-preta;
+    width: 2rem;
+    height: 2rem;
+  }
 }

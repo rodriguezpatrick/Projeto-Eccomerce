@@ -10,13 +10,14 @@ $cor-cinza: #585858;
 
 // mixins
 @mixin flex(
+  $display: flex,
   $direction: row,
   $align: stretch,
   $justify: start,
   $gap: 0,
   $wrap: nowrap
 ) {
-  display: flex;
+  display: $display;
   flex-flow: $direction $wrap;
   align-items: $align;
   justify-content: $justify;
