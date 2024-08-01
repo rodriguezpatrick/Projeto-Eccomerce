@@ -3,6 +3,7 @@
   position: relative;
   padding: 0 2.5rem;
   background-color: $cor-branca;
+  z-index: 99;
   &__container {
     @include flex($align: center, $gap: 6.1rem);
   }
@@ -38,9 +39,9 @@
       }
       &--logado {
         & .cabecalho__icone {
-          display: none;
+          display: block;
           &--logado {
-            display: block;
+            display: none;
           }
         }
       }
@@ -60,7 +61,7 @@
   }
 
   &__item-lista {
-    padding: 3.12rem 0;
+    padding: 3.9rem 0;
     &:hover {
       border-bottom-color: currentColor;
       & .cabecalho-escondido {
@@ -125,7 +126,7 @@
     border-radius: 0.5rem;
     transform: translate(2%, 10%);
     &--aberto {
-      display: flex;
+      display: none;
     }
     &::before {
       content: "";

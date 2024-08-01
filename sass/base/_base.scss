@@ -12,11 +12,12 @@ body{
   font-family: Inter, sans-serif;
   font-size: 1.33rem;
   line-height: 1.4;
-  background-color: $cor-preta;
+  background-color: $cor-branca;
 }
 
 img{
   width: 100%;
+  max-width: 100%;
 }
 
 li{

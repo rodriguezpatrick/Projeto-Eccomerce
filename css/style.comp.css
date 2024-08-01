@@ -321,11 +321,12 @@ body {
   font-family: Inter, sans-serif;
   font-size: 1.33rem;
   line-height: 1.4;
-  background-color: #000;
+  background-color: #fff;
 }
 
 img {
   width: 100%;
+  max-width: 100%;
 }
 
 li {
@@ -341,6 +342,7 @@ li {
   position: relative;
   padding: 0 2.5rem;
   background-color: #fff;
+  z-index: 99;
 }
 .cabecalho__container {
   display: flex;
@@ -362,19 +364,26 @@ li {
   list-style-type: none;
 }
 .cabecalho__link {
+  font-size: 1.33rem;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
-  color: #000;
+  color: inherit;
+  line-height: 1;
   border-bottom: solid 2px transparent;
 }
 .cabecalho__link:hover {
   border-bottom: solid 2px currentColor;
 }
 .cabecalho__link-icone {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
   color: inherit;
   text-decoration: none;
-  transition: transform ease-in 200ms, color ease 100ms;
+  transition: transform ease-in 200ms;
 }
 .cabecalho__link-icone:hover {
   color: #ff0000;
@@ -390,8 +399,16 @@ li {
   color: #ff0000;
   border-bottom: solid 2px transparent;
 }
+.cabecalho__link--perfil {
+  text-transform: none;
+  font-weight: 400;
+  border-bottom: none;
+}
+.cabecalho__link--perfil:hover {
+  border-bottom: none;
+}
 .cabecalho__item-lista {
-  padding: 3.12rem 0;
+  padding: 3.9rem 0;
 }
 .cabecalho__item-lista:hover {
   border-bottom-color: currentColor;
@@ -418,6 +435,7 @@ li {
 }
 .cabecalho__icone--menor {
   width: 1.6rem;
+  transition: transform ease-in 200ms;
 }
 .cabecalho__icone--logado {
   display: none;
@@ -426,8 +444,10 @@ li {
   fill: transparent;
   stroke: currentColor;
 }
-.cabecalho__link-icone-container {
+.cabecalho__icone-carrinho-container {
   position: relative;
+  width: 1.6rem;
+  height: 2rem;
 }
 .cabecalho__numero-itens {
   display: flex;
@@ -435,18 +455,61 @@ li {
   align-items: center;
   justify-content: center;
   gap: 0;
-  display: none;
   font-size: 1.11rem;
   position: absolute;
   right: 0;
   top: 0;
-  transform: translate(50%, -50%);
+  transform: translate(55%, -55%);
   width: 1.5rem;
   height: 1.5rem;
   padding: 0.82rem;
   border-radius: 50%;
   background-color: #ff0000;
   color: #fff;
+}
+.cabecalho__icone-login-container {
+  position: relative;
+}
+.cabecalho__informacoes-perfil {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1.28rem;
+  position: absolute;
+  background-color: #fff;
+  right: 0;
+  padding: 2.5rem 2rem;
+  width: 15rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  transform: translate(2%, 10%);
+}
+.cabecalho__informacoes-perfil--aberto {
+  display: none;
+}
+.cabecalho__informacoes-perfil::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  right: 0;
+  border: solid 1rem transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  transform: translate(-119%, -100%);
+}
+.cabecalho__informacoes-perfil::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  right: 0;
+  border: solid 1rem transparent;
+  border-bottom-color: #fff;
+  transform: translate(-119%, -99%);
+}
+.cabecalho__uppercase {
+  text-transform: uppercase;
 }
 
 .cabecalho-escondido {
@@ -529,6 +592,69 @@ li {
   color: #000;
   width: 2rem;
   height: 2rem;
+}
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1330/450.5;
+  overflow: hidden;
+}
+.carrossel__banners {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
+}
+.carrossel__banner {
+  min-width: 100%;
+  height: 100%;
+}
+.carrossel__roladores {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.65rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -2rem);
+}
+.carrossel__rolador {
+  width: 12.5rem;
+  height: 0.2rem;
+  background-color: rgba(167, 167, 167, 0.5);
+  border-radius: 5rem;
+}
+.carrossel__preenchimento {
+  width: 1.5%;
+  height: 100%;
+  background-color: #fff;
+}
+.carrossel__preenchimento--completo {
+  width: 100%;
+  transition: width ease-out 5s;
+}
+
+.grid {
+  padding: 2.5rem 1.28rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 1.4rem;
+  column-gap: 0;
+}
+.grid__tipo {
+  width: 65rem;
+}
+.grid__tipo a {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
 }
 
 /*# sourceMappingURL=style.comp.css.map */
