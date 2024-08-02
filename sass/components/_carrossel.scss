@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     aspect-ratio: 1330/450.5;
-    overflow: hidden;
+    overflow: hidden;   
     &__banners{
         @include flex();
         transition: transform ease 500ms;

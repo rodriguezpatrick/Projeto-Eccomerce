@@ -327,10 +327,42 @@ body {
 img {
   width: 100%;
   max-width: 100%;
+  display: block;
 }
 
 li {
   list-style: none;
+}
+
+.newsletter {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
+}
+.newsletter__titulo {
+  font-size: 2.76rem;
+}
+.newsletter__botao {
+  background-color: #000;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1.4rem;
+}
+.newsletter__caixa {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
+}
+.newsletter__aplicativo {
+  width: 15rem;
+}
+.newsletter__logo {
+  width: 1.8rem;
+  height: 2.3rem;
 }
 
 .cabecalho {
@@ -606,6 +638,7 @@ li {
   align-items: stretch;
   justify-content: start;
   gap: 0;
+  transition: transform ease 500ms;
 }
 .carrossel__banner {
   min-width: 100%;
@@ -642,19 +675,18 @@ li {
   padding: 2.5rem 1.28rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  row-gap: 1.4rem;
-  column-gap: 0;
+  gap: 1.02rem;
 }
-.grid__tipo {
-  width: 65rem;
-}
-.grid__tipo a {
+
+.descontos__beneficios {
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;
   justify-content: start;
   gap: 0;
+}
+.descontos__icone {
+  width: 3.1rem;
 }
 
 /*# sourceMappingURL=style.comp.css.map */

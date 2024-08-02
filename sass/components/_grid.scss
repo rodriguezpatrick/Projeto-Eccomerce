@@ -2,13 +2,5 @@
     padding: 2.5rem 1.28rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    row-gap: 1.4rem;
-    column-gap: 0;
-    &__tipo{
-        width: 65rem;
-        & a{
-            @include flex();
-        }
-    }
+    gap: 1.02rem;
 }
