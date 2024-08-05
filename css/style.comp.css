@@ -334,28 +334,84 @@ li {
   list-style: none;
 }
 
+.rodape {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 2.5rem;
+}
+
 .newsletter {
+  padding: 2.5rem 1.28rem;
+  background-color: #ededed;
+  min-width: 20rem;
+  background-color: #ededed;
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;
   justify-content: start;
-  gap: 0;
+  gap: 17.54rem;
+}
+.newsletter__assine {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.82rem;
 }
 .newsletter__titulo {
   font-size: 2.76rem;
+  text-wrap: nowrap;
 }
 .newsletter__botao {
+  color: #fff;
+  text-transform: uppercase;
   background-color: #000;
-  border-radius: 2rem;
+  border-radius: 1rem;
   border: none;
   font-size: 1.4rem;
+  padding: 1.4rem 3rem;
+  cursor: pointer;
 }
 .newsletter__caixa {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.82rem;
+}
+.newsletter__input {
+  padding: 1.1rem 1.6rem;
+  border-radius: 0.7rem;
+  border: 1px solid #585858;
+  width: 100%;
+}
+.newsletter__input:focus-visible {
+  border-color: none;
+}
+.newsletter__form {
+  display: flex;
+  flex-flow: row nowrap;
   align-items: stretch;
   justify-content: start;
-  gap: 0;
+  gap: 0.62rem;
+  width: 100%;
+}
+.newsletter__app {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.82rem;
+  width: 50%;
+}
+.newsletter__caixa-aplicativo {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1rem;
 }
 .newsletter__aplicativo {
   width: 15rem;
@@ -363,6 +419,223 @@ li {
 .newsletter__logo {
   width: 1.8rem;
   height: 2.3rem;
+}
+
+.informacoes {
+  padding: 2.5rem 1.28rem;
+}
+.informacoes__container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 13rem;
+}
+.informacoes__sobre {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 4rem;
+}
+.informacoes__caixa {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  justify-content: start;
+  gap: 0.65rem;
+  max-width: 15rem;
+}
+.informacoes__caixa-acessibilidade {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  justify-content: start;
+  gap: 3rem;
+  min-width: 30rem;
+}
+.informacoes__acessibilidade {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 2rem;
+}
+.informacoes__contato {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 7rem;
+}
+.informacoes__libras-troca {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 5rem;
+}
+.informacoes__atendimento-tipos {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1rem;
+}
+.informacoes__whatsapp {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1rem;
+}
+.informacoes__titulo {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.informacoes__link {
+  list-style: none;
+  color: #585858;
+  text-decoration: none;
+  border-bottom: solid 1px transparent;
+}
+.informacoes__link:hover {
+  border-bottom: solid 1px currentColor;
+}
+.informacoes__atendimento-icone {
+  width: 2rem;
+}
+.informacoes__redes-sociais {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.informacoes__icone-rede-social {
+  width: 2.1rem;
+  opacity: 0.6;
+  filter: grayscale(1);
+}
+.informacoes__icone-rede-social:hover {
+  opacity: unset;
+  filter: none;
+  cursor: pointer;
+}
+
+.compras {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4.5rem 1.28rem;
+  opacity: 0.6;
+  filter: grayscale(1);
+}
+.compras__cabecalho {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.82rem;
+}
+.compras__conteudo {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 19rem;
+}
+.compras__icones {
+  width: 5rem;
+}
+.compras__titulo {
+  font-size: 1.6rem;
+}
+.compras__texto {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.marcas {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+  padding: 2.5rem 1.28rem;
+}
+.marcas__caixa {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.marcas__titulo {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.marcas__imagens {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 0.82rem;
+}
+.marcas__imagem-empresa {
+  width: 2.666rem;
+}
+.marcas__imagem-capitalismo {
+  width: 9.8rem;
+}
+.marcas__imagem-reserva {
+  width: 13.5rem;
+}
+.marcas__imagem-mini {
+  width: 6.1rem;
+}
+.marcas__imagem-go {
+  width: 5.8rem;
+}
+.marcas__imagem-reversa {
+  width: 12rem;
+}
+.marcas__imagem-encrypt {
+  width: 8.2rem;
+}
+.marcas__imagem-laranja {
+  width: 4.372rem;
+}
+.marcas__imagem-verde {
+  width: 2.666rem;
+}
+.marcas__imagem-reserva, .marcas__imagem-mini, .marcas__imagem-go, .marcas__imagem-reversa {
+  opacity: 0.6;
+}
+.marcas__imagem-reserva:hover, .marcas__imagem-mini:hover, .marcas__imagem-go:hover, .marcas__imagem-reversa:hover {
+  opacity: unset;
+  filter: none;
+  cursor: pointer;
+}
+
+.endereco {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
+  background-color: #ededed;
+  padding: 2.5rem 1.28rem;
+}
+.endereco__fonte {
+  font-size: 1.11rem;
+  color: #bdbdbd;
 }
 
 .cabecalho {

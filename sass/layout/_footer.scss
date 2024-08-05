@@ -1,15 +1,15 @@
 .rodape {
-    @include flex($direction: column, $gap: 2.5rem);
-  padding: 2.5rem 1.28rem;
-  background-color: $cor-cinza-mais-claro;
+  @include flex($direction: column, $gap: 2.5rem);
 }
 .newsletter {
+  padding: 2.5rem 1.28rem;
+  background-color: $cor-cinza-mais-claro;
   // width: 113rem;
   // margin: 0 auto;
   // o site mudou o seu estilo
   min-width: 20rem;
   background-color: $cor-cinza-mais-claro;
-  @include flex($gap: 9.54rem);
+  @include flex($gap: 17.54rem);
   &__assine {
     @include flex($direction: column, $gap: 0.82rem);
   }
@@ -62,35 +62,50 @@
 }
 
 .informacoes {
-    &__container{
-        @include flex($gap:13rem);
-    }
-    &__sobre{
-        @include flex($gap: 2rem);    
-    }
-    &__caixa{
-        @include flex($direction: column, $gap: 0.65rem, $align: start);
-    }
-    &__caixa-acessibilidade{
-        @include flex($direction: column, $align: start, $justify:start, $gap: 2rem)
-    }
-    &__acessibilidade{
-        @include flex($direction: column)
-    }
-    &__contato{
-        @include flex()
-    }
-    &__atendimento-tipos{
-        @include flex();
-    }
+  padding: 2.5rem 1.28rem;
+  &__container {
+    @include flex($gap: 13rem);
+  }
+  &__sobre {
+    @include flex($gap: 4rem);
+  }
+  &__caixa {
+    @include flex($direction: column, $gap: 0.65rem, $align: start);
+    max-width: 15rem;
+  }
+  &__caixa-acessibilidade {
+    @include flex(
+      $direction: column,
+      $align: start,
+      $justify: start,
+      $gap: 3rem
+    );
+    min-width: 30rem;
+  }
+  &__acessibilidade {
+    @include flex($direction: column, $gap: 2rem);
+  }
+  &__contato {
+    @include flex($align: center, $gap: 7rem);
+  }
+  &__libras-troca {
+    @include flex($direction: column, $gap: 5rem);
+  }
+  &__atendimento-tipos {
+    @include flex($gap: 1rem);
+  }
+  &__whatsapp {
+    @include flex($direction: column, $gap: 1rem);
+  }
   &__titulo {
     text-decoration: none;
     font-family: sans-serif;
     color: $cor-preta;
     font-weight: 700;
-    &--maior{
-        font-size: 1.76rem;
-    }
+    font-size: 1.6rem;
+    // &--maior{
+    //   font-size: 1.6rem;
+    // }
   }
   &__link {
     list-style: none;
@@ -104,17 +119,120 @@
   &__atendimento-icone {
     width: 2rem;
   }
-  &__redes-sociais{
+  &__redes-sociais {
     @include flex($justify: center, $align: center, $gap: 5rem);
   }
   &__icone-rede-social {
     width: 2.1rem;
     opacity: 0.6;
     filter: grayscale(1);
-    &:hover{
-        opacity: unset;
-        filter: none;
-        cursor: pointer;
+    &:hover {
+      opacity: unset;
+      filter: none;
+      cursor: pointer;
     }
+  }
+}
+
+.compras {
+  @include flex($justify: center, $gap: 2rem);
+  padding: 4.5rem 1.28rem;
+  opacity: 0.6;
+  filter: grayscale(1);
+  &__cabecalho {
+    @include flex(
+      $direction: column,
+      $gap: 0.82rem,
+      $justify: center,
+      $align: center
+    );
+  }
+  &__conteudo {
+    @include flex(
+      $direction: column,
+      $align: center,
+      $justify: center,
+      $gap: 1rem
+    );
+    max-width: 19rem;
+  }
+  &__icones {
+    width: 5rem;
+  }
+  &__titulo {
+    font-size: 1.6rem;
+  }
+  &__texto {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+.marcas {
+  @include flex($justify: space-between);
+  padding: 2.5rem 1.28rem;
+  &__caixa {
+    @include flex(
+      $direction: column,
+      $justify: center,
+      $align: center,
+      $gap: 1rem
+    );
+  }
+  &__titulo {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  &__imagens {
+    @include flex($align: center, $gap: 0.82rem);
+  }
+  &__imagem-empresa {
+    width: 2.666rem;
+  }
+  &__imagem-capitalismo {
+    width: 9.8rem;
+  }
+  &__imagem-reserva {
+    width: 13.5rem;
+  }
+  &__imagem-mini {
+    width: 6.1rem;
+  }
+  &__imagem-go {
+    width: 5.8rem;
+  }
+  &__imagem-reversa {
+    width: 12rem;
+  }
+  &__imagem-encrypt {
+    width: 8.2rem;
+  }
+  &__imagem-laranja {
+    width: 4.372rem;
+  }
+  &__imagem-verde {
+    width: 2.666rem;
+  }
+  &__imagem-reserva,
+  &__imagem-mini,
+  &__imagem-go,
+  &__imagem-reversa {
+    opacity: 0.6;
+
+    &:hover {
+      opacity: unset;
+      filter: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.endereco {
+  @include flex($justify: center);
+  background-color: $cor-cinza-mais-claro;
+  padding: 2.5rem 1.28rem;
+  &__fonte {
+    font-size: 1.11rem;
+    color: #bdbdbd;
   }
 }
