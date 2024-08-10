@@ -15,8 +15,12 @@
   </head>
   <body>
     <header class="cabecalho">
+      <div class="cabecalho__menu">
+        <img class="cabecalho__menu-sanduiche" src="/img/sanduiche.svg" alt="ícone sanduiche do cabeçalho" />
+        <p class="cabecalho__menu-x">&#10006;</p>
+      </div>
       <div class="cabecalho__container">
-        <a href="https://www.usereserva.com/">
+        <a class="cabecalho__link-logo" href="https://www.usereserva.com/">
           <img
             src="https://lojausereserva.vtexassets.com/assets/vtex/assets-builder/lojausereserva.lojausereserva-theme/5.0.16/icons/logo-black-rsv___e6008150aa5a6134f9a0ae5fe52a06d3.svg"
             alt="logo da Reserva"
@@ -28,12 +32,12 @@
             <li class="cabecalho__item-lista">
               <a
                 class="cabecalho__link"
-                href="https://www.usereserva.com/colecao-reserva/masculino"
+                href=""
                 >Masculino</a
               >
               <div class="cabecalho-escondido">
                 <div class="cabecalho-escondido__imagem">
-                  <a href=""
+                  <a class="cabecalho__escondido-link-imagem" href=""
                     ><img
                       src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/9e676dd0-bf5b-484d-a7e2-4c76273e1224___02d9401dea01241b15929cb8bd3f0152.jpg"
                       alt="imagem "
@@ -41,7 +45,34 @@
                 </div>
                 <ul class="cabecalho-escondido__titulos">
                   <li class="cabecalho-escondido__tipo">
-                    <a class="cabecalho-escondido__titulo" href="">Novidades</a>
+                    
+                    <ul class="cabecalho-escondido__conteudos">
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Lançamento Senna</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Dia dos Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Camisetas Temáticas Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Reserva Pra Torcer</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Cashback em Dobro</a
+                        >
+                      </li>
+                    </ul>
                     <ul class="cabecalho-escondido__conteudos">
                       <li>
                         <a href="" class="cabecalho-escondido__conteudo"
@@ -70,232 +101,18 @@
                       </li>
                     </ul>
                   </li>
-                  <!-- <li class="cabecalho-escondido__tipo">
-                    <a class="cabecalho-escondido__titulo" href="">Roupas</a>
-                    <ul class="cabecalho-escondido__conteudos">
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Camisetas</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Polos</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Camisas</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Casacos e Jaquetas</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Moletom</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Calça</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Bermudas e Shorts</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Cuecas e Meias</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Sungas</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo cabecalho-escondido__conteudo--decorado"
-                          >Ver Todos</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="cabecalho-escondido__tipo">
-                    <a class="cabecalho-escondido__titulo" href=""
-                      >Acessórios</a
-                    >
-                    <ul class="cabecalho-escondido__conteudos">
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Óculos</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Mochilas</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Carteiras</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Bonés</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Perfumes</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Cintos e Chaveiros</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Necessaires</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Reserva Pets</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo cabecalho-escondido__conteudo--decorado"
-                          >Ver Todos</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="cabecalho-escondido__tipo">
-                    <a class="cabecalho-escondido__titulo" href="">Linhas</a>
-                    <ul class="cabecalho-escondido__conteudos">
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Camisas Oxford</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Pima</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Linho</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Kits com 15% OFF</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Cuecas</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Jeans</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Reserva GGG</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Tal Pai, Tal Filho(a)</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="cabecalho-escondido__tipo">
-                    <a class="cabecalho-escondido__titulo" href=""
-                      >Coleções Especiais</a
-                    >
-                    <ul class="cabecalho-escondido__conteudos">
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Senna</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Botafogo</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Vasco</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Flamengo</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Thiaguinho</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Acelerados</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo cabecalho-escondido__conteudo--decorado"
-                          >Ver Todos</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="cabecalho-escondido__tipo">
-                    <a class="cabecalho-escondido__titulo" href="">Ofertas</a>
-                    <ul class="cabecalho-escondido__conteudos">
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Tudo com 60% OFF</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Camisetas a partir de R$79</a
-                        >
-                      </li>
-                      <li>
-                        <a href="" class="cabecalho-escondido__conteudo"
-                          >Ofertas até 60% - Leve 3 Pague 2</a
-                        >
-                      </li>
-                    </ul>
-                  </li> -->
                 </ul>
               </div>
             </li>
             <li class="cabecalho__item-lista">
               <a
                 class="cabecalho__link"
-                href="https://www.usereserva.com/reversa"
+                href=""
                 >Feminino</a
               >
               <div class="cabecalho-escondido">
                 <div class="cabecalho-escondido__imagem">
-                  <a href=""
+                  <a class="cabecalho__escondido-link-imagem" href=""
                     ><img
                       src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/9e676dd0-bf5b-484d-a7e2-4c76273e1224___02d9401dea01241b15929cb8bd3f0152.jpg"
                       alt="imagem "
@@ -303,7 +120,34 @@
                 </div>
                 <ul class="cabecalho-escondido__titulos">
                   <li class="cabecalho-escondido__tipo">
-                    <a class="cabecalho-escondido__titulo" href="">Novidades</a>
+                    
+                    <ul class="cabecalho-escondido__conteudos">
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Lançamento Senna</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Dia dos Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Camisetas Temáticas Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Reserva Pra Torcer</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Cashback em Dobro</a
+                        >
+                      </li>
+                    </ul>
                     <ul class="cabecalho-escondido__conteudos">
                       <li>
                         <a href="" class="cabecalho-escondido__conteudo"
@@ -341,7 +185,7 @@
               >
               <div class="cabecalho-escondido">
                 <div class="cabecalho-escondido__imagem">
-                  <a href=""
+                  <a class="cabecalho__escondido-link-imagem" href=""
                     ><img
                       src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/9e676dd0-bf5b-484d-a7e2-4c76273e1224___02d9401dea01241b15929cb8bd3f0152.jpg"
                       alt="imagem "
@@ -349,7 +193,34 @@
                 </div>
                 <ul class="cabecalho-escondido__titulos">
                   <li class="cabecalho-escondido__tipo">
-                    <a class="cabecalho-escondido__titulo" href="">Novidades</a>
+                   
+                    <ul class="cabecalho-escondido__conteudos">
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Lançamento Senna</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Dia dos Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Camisetas Temáticas Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Reserva Pra Torcer</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Cashback em Dobro</a
+                        >
+                      </li>
+                    </ul>
                     <ul class="cabecalho-escondido__conteudos">
                       <li>
                         <a href="" class="cabecalho-escondido__conteudo"
@@ -389,7 +260,7 @@
               >
               <div class="cabecalho-escondido">
                 <div class="cabecalho-escondido__imagem">
-                  <a href=""
+                  <a class="cabecalho__escondido-link-imagem" href=""
                     ><img
                       src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/9e676dd0-bf5b-484d-a7e2-4c76273e1224___02d9401dea01241b15929cb8bd3f0152.jpg"
                       alt="imagem "
@@ -397,7 +268,34 @@
                 </div>
                 <ul class="cabecalho-escondido__titulos">
                   <li class="cabecalho-escondido__tipo">
-                    <a class="cabecalho-escondido__titulo" href="">Novidades</a>
+                    
+                    <ul class="cabecalho-escondido__conteudos">
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Lançamento Senna</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Dia dos Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Camisetas Temáticas Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Reserva Pra Torcer</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Cashback em Dobro</a
+                        >
+                      </li>
+                    </ul>
                     <ul class="cabecalho-escondido__conteudos">
                       <li>
                         <a href="" class="cabecalho-escondido__conteudo"
@@ -443,7 +341,34 @@
                 </div>
                 <ul class="cabecalho-escondido__titulos">
                   <li class="cabecalho-escondido__tipo">
-                    <a class="cabecalho-escondido__titulo" href="">Novidades</a>
+                    
+                    <ul class="cabecalho-escondido__conteudos">
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Lançamento Senna</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Dia dos Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Camisetas Temáticas Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Reserva Pra Torcer</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Cashback em Dobro</a
+                        >
+                      </li>
+                    </ul>
                     <ul class="cabecalho-escondido__conteudos">
                       <li>
                         <a href="" class="cabecalho-escondido__conteudo"
@@ -483,7 +408,7 @@
               >
               <div class="cabecalho-escondido">
                 <div class="cabecalho-escondido__imagem">
-                  <a href=""
+                  <a class="cabecalho__escondido-link-imagem" href=""
                     ><img
                       src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/9e676dd0-bf5b-484d-a7e2-4c76273e1224___02d9401dea01241b15929cb8bd3f0152.jpg"
                       alt="imagem "
@@ -491,7 +416,34 @@
                 </div>
                 <ul class="cabecalho-escondido__titulos">
                   <li class="cabecalho-escondido__tipo">
-                    <a class="cabecalho-escondido__titulo" href="">Novidades</a>
+                  
+                    <ul class="cabecalho-escondido__conteudos">
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Lançamento Senna</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Dia dos Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Camisetas Temáticas Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Reserva Pra Torcer</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Cashback em Dobro</a
+                        >
+                      </li>
+                    </ul>
                     <ul class="cabecalho-escondido__conteudos">
                       <li>
                         <a href="" class="cabecalho-escondido__conteudo"
@@ -531,7 +483,7 @@
               >
               <div class="cabecalho-escondido">
                 <div class="cabecalho-escondido__imagem">
-                  <a href=""
+                  <a class="cabecalho__escondido-link-imagem" href=""
                     ><img
                       src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/9e676dd0-bf5b-484d-a7e2-4c76273e1224___02d9401dea01241b15929cb8bd3f0152.jpg"
                       alt="imagem "
@@ -539,7 +491,34 @@
                 </div>
                 <ul class="cabecalho-escondido__titulos">
                   <li class="cabecalho-escondido__tipo">
-                    <a class="cabecalho-escondido__titulo" href="">Novidades</a>
+                   
+                    <ul class="cabecalho-escondido__conteudos">
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Lançamento Senna</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Dia dos Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Camisetas Temáticas Pais</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Reserva Pra Torcer</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="cabecalho-escondido__conteudo"
+                          >Cashback em Dobro</a
+                        >
+                      </li>
+                    </ul>
                     <ul class="cabecalho-escondido__conteudos">
                       <li>
                         <a href="" class="cabecalho-escondido__conteudo"
@@ -587,6 +566,7 @@
                 fill-rule="evenodd"
                 clip-rule="evenodd"
                 d="M8 1.333a3.332 3.332 0 100 6.662 3.332 3.332 0 100-6.662zM3.334 4.664A4.665 4.665 0 018 0a4.665 4.665 0 110 9.328 4.665 4.665 0 01-4.666-4.664zm2 8.662A3.333 3.333 0 002 16.657v1.996h12v-1.996a3.333 3.333 0 00-3.333-3.333H5.334zM.667 16.657a4.666 4.666 0 014.667-4.666h5.333a4.666 4.666 0 014.667 4.666v3.33H.667v-3.33z"
+                fill="inherit"
               />
             </svg>
             <svg
@@ -595,6 +575,7 @@
             >
               <path
                 d="M16.8496 15.3103C15.526 13.6954 12.9549 12.5999 9.99992 12.5999C7.04496 12.5999 4.47379 13.6954 3.15028 15.3103M16.8496 15.3103C17.9885 13.8434 18.6666 12.0009 18.6666 9.99992C18.6666 5.21345 14.7864 1.33325 9.99992 1.33325C5.21345 1.33325 1.33325 5.21345 1.33325 9.99992C1.33325 12.0009 2.01135 13.8434 3.15028 15.3103M16.8496 15.3103C15.264 17.3525 12.7854 18.6666 9.99992 18.6666C7.21439 18.6666 4.7358 17.3525 3.15028 15.3103M13.4666 7.39992C13.4666 9.31451 11.9145 10.8666 9.99992 10.8666C8.08533 10.8666 6.53325 9.31451 6.53325 7.39992C6.53325 5.48533 8.08533 3.93325 9.99992 3.93325C11.9145 3.93325 13.4666 5.48533 13.4666 7.39992Z"
+                stroke="inherit"
               />
             </svg>
           </a>
@@ -629,9 +610,11 @@
             >
               <path
                 d="M15.328 5.484a.656.656 0 00-.672-.613h-2.219v-.613C12.437 1.903 10.454 0 8 0S3.563 1.903 3.563 4.258v.613H1.378a.656.656 0 00-.672.613L0 19.323c0 .16.067.322.168.451A.615.615 0 00.672 20h14.656c.37 0 .672-.29.672-.645l-.672-13.871zm-1.311.645l.639 12.58H1.377l.639-12.548c4.217-.015 8.103-.032 12-.032zm-9.11-1.258v-.613C4.908 2.613 6.287 1.29 8 1.29s3.092 1.323 3.092 2.968v.613H4.908z"
-              />
+                fill="inherit"
+              ></path>
               <path
                 d="M11.81 16.37c-.127-.102-.7-.511-.986-.784-.095-.103-.032-.24-.16-.342l-.477-.512c-.19-.204-.35-.41-.509-.614-.159-.205-.604-.887-.955-1.331-.413-.478-1.145-1.058-1.368-1.604 0-.034-.032-.068-.032-.102a3.213 3.213 0 01-.063-.58c0-.205.063-.444.286-.785.255-.41.19-.58.127-.58-.095 0-.159 0-.095-.41.063-.376.032-.512-.032-.615-.032-.068-.095-.136-.16-.102-.095.034-.19.273-.286.341-.031.034-.159.103-.127-.239 0-.068-.032-.102-.127-.068-.096.068-.255.24-.35.58 0 .035-.032.035-.032 0 0-.034-.032-.136 0-.273.032-.136.064-.239.032-.239-.064-.034-.16.137-.223.308 0 .034 0 .034-.032.068 0 .034-.032.034-.032 0s0-.068.032-.137v-.034c-.032 0-.063 0-.095.034-.064.069-.16.171-.191.308v.477c0 .034-.064.034-.064.137.032.205.127.41.16.512 0 .034 0 .068-.033.102-.19.068-.636.205-.986.444-.032 0-.032.034-.032.068.032.034.064.034.064 0 .382-.136.923-.307 1.177-.136.191.136.223.511.096.887-.032.136-.096.273-.128.41-.54 1.57.478 2.286 1.4 3.242.064.068.223.239.35.443.096.137.192.307.192.478 0 .137-.032.307-.064.512-.064.239-.095.136-.477.034-.128-.034-.128-.034-.191.137-.064.17-.096.204-.064.204s.7 0 .796.034h.031c.096.035.478.24.573.342.032.034.064 0 .064 0 .032-.034 0-.068-.032-.068-.159-.103-.509-.41-.54-.478 0-.034.031-.17.031-.273.064-.444.064-.615.255-.683.159-.068.509.137.795.205 0 0 .032 0 .032.034a1.5 1.5 0 01-.095.307c0 .034-.032.069-.064.103-.064.034-.287-.069-.446-.103-.063-.034-.095-.068-.222.273v.034s.668.035.763.069c.032 0 .032 0 .064.034.255.136.446.239.573.341.063.034.095.068.127.034s0-.068-.032-.102c0 0-.159-.137-.318-.24-.127-.102-.286-.17-.255-.238 0-.034.032-.102.032-.137 0-.034.064-.204.064-.307l.032-.034c.7.273.923.751 1.464 1.058.573.341 1.304.034.763-.444z"
+                fill="inherit"
               />
             </svg>
           </a>
@@ -794,12 +777,20 @@
         <section class="newsletter">
           <div class="newsletter__assine">
             <div class="newsletter__caixa">
-              <img
-                class="newsletter__logo"
-                src="./img/logo-picapau.svg"
-                alt="logo picapau vermelho reserva"
-              />
-              <p class="newsletter__titulo">Assine nossa newsletter</p>
+              <div class="newsletter__cabecalho-picapau">
+                <svg
+                  class="newsletter__logo"
+                  viewBox="0 0 18 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.4909 21.4296C17.1766 21.1607 15.7103 20.13 14.9972 19.4579C14.7252 19.189 14.9138 18.8977 14.6201 18.5617C14.2223 18.1584 13.8029 17.7102 13.3629 17.2397C12.9229 16.7468 12.5045 16.2091 12.0852 15.6489C11.708 15.0887 10.556 13.386 9.6131 12.2656C8.60738 11.0558 6.70104 9.57697 6.17657 8.21022C6.15595 8.1206 6.11371 8.03098 6.09308 7.94135C5.96737 7.51564 5.92514 7.02272 5.94674 6.44017C5.96737 5.88003 6.11371 5.34229 6.67943 4.40125C7.308 3.393 7.18228 2.94488 6.97308 2.90008C6.76389 2.85526 6.53309 2.87766 6.76389 1.8246C6.97309 0.905965 6.82675 0.525068 6.70104 0.301011C6.57532 0.0769543 6.42799 -0.0350741 6.30228 0.00973726C6.03022 0.0769544 5.82102 0.749125 5.5696 0.92837C5.50674 0.973182 5.15022 1.17484 5.23371 0.323417C5.25531 0.121766 5.12959 0.0545486 4.94102 0.166577C4.66798 0.345822 4.29084 0.816342 4.08164 1.69016C4.06102 1.73498 4.01879 1.75738 3.99817 1.69016C3.95594 1.57813 3.95593 1.37649 4.01879 1.0404C4.08165 0.726719 4.20736 0.457851 4.08164 0.435445C3.9137 0.390634 3.66228 0.771531 3.47371 1.21964C3.45308 1.28686 3.43244 1.30927 3.41084 1.35408C3.39021 1.39889 3.32736 1.4437 3.32736 1.33167C3.32736 1.26446 3.34798 1.13002 3.39022 0.973182C3.41084 0.905965 3.36959 0.883559 3.34798 0.883559C3.28513 0.861154 3.22227 0.905965 3.13879 0.973182C2.95022 1.13002 2.76164 1.39889 2.6153 1.77978C2.59369 1.8246 2.59369 1.86941 2.57307 1.91422V1.93663C2.57307 1.95903 2.57307 1.95903 2.55245 1.98144C2.55245 2.00385 2.53084 2.02625 2.53084 2.04865C2.53084 2.07107 2.51022 2.11587 2.51022 2.13827V2.16068C2.48959 2.20549 2.48959 2.27271 2.46798 2.33992C2.44736 2.40714 2.44735 2.47436 2.44735 2.54158C2.44735 2.54158 2.44735 2.54158 2.44735 2.56399C2.42672 2.74323 2.42673 2.90008 2.42673 3.07932C2.42673 3.10172 2.42673 3.12413 2.42673 3.16894C2.42673 3.25857 2.21655 3.28097 2.27941 3.48262C2.3845 3.99795 2.57308 4.51328 2.65656 4.78215C2.69879 4.87177 2.63593 4.9838 2.55245 5.02861C2.11245 5.16304 0.896546 5.56635 0.058774 6.12649C0.0175238 6.14889 -0.0247159 6.23852 0.0175165 6.30574C0.0587666 6.37296 0.163858 6.37296 0.20609 6.35054C1.16958 6.01447 2.55244 5.52153 3.22226 6.03687C3.7045 6.41776 3.76736 7.31399 3.45307 8.27743C3.34798 8.63592 3.24388 8.94961 3.13879 9.2857C1.71369 13.2739 4.33308 15.1336 6.72166 17.5085C6.88961 17.6878 7.26675 18.1135 7.58104 18.6289C7.81086 18.9874 8.06229 19.4131 8.02104 19.8164C7.99943 20.1525 7.95818 20.5557 7.83246 21.0935C7.70675 21.7433 7.55944 21.4296 6.59595 21.1607C6.30229 21.0711 6.28166 21.1159 6.09308 21.5416C5.90451 21.9897 5.88388 22.0345 5.92513 22.0794C5.96736 22.1018 7.748 22.1018 7.95818 22.1241C7.97881 22.1241 8.02103 22.1466 8.04166 22.1466C8.25086 22.2586 9.23596 22.7515 9.52864 22.9756C9.59149 23.0204 9.69659 22.998 9.73882 22.9531C9.78007 22.8859 9.75945 22.7963 9.69659 22.7515C9.25659 22.4602 8.35596 21.7433 8.33533 21.5192C8.33533 21.4296 8.39819 21.1159 8.43944 20.8694C8.60739 19.7492 8.628 19.3458 9.04738 19.1218C9.44515 18.9202 10.3674 19.4354 11.0794 19.6147C11.1217 19.6147 11.1423 19.6596 11.1217 19.6819C11.1001 19.7939 11.0372 20.0628 10.9115 20.4886C10.8909 20.5557 10.8486 20.6901 10.7229 20.735C10.5766 20.7798 9.96864 20.5333 9.55025 20.4437C9.3823 20.3989 9.31944 20.2869 8.9423 21.1607C8.92167 21.2279 8.92167 21.2504 8.9423 21.2504C8.96292 21.2727 10.6601 21.3623 10.9115 21.4072C10.9537 21.4072 10.996 21.4296 11.0372 21.4519C11.6658 21.788 12.1903 22.0794 12.5252 22.2809C12.7137 22.393 12.7766 22.4379 12.8395 22.3706C12.9229 22.2809 12.8395 22.1913 12.7766 22.1241C12.7344 22.0794 12.3572 21.788 11.9801 21.5192C11.6245 21.2504 11.2887 21.0711 11.2887 20.9366C11.2887 20.8694 11.3309 20.6454 11.3515 20.5782C11.3731 20.5333 11.4988 20.018 11.5401 19.8388C11.5401 19.7939 11.5823 19.7715 11.6245 19.7939C13.4474 20.4437 14.0131 21.6984 15.396 22.4826C17.0715 23.4013 18.915 22.617 17.4909 21.4296Z"
+                    fill="#E4002B"
+                  ></path>
+                </svg>
+                <p class="newsletter__titulo">Assine nossa newsletter</p>
+              </div>
               <p class="newsletter__texto">
                 Cadastre-se e receba promoções exclusivas e saiba tudo antes de
                 todo mundo!
@@ -897,6 +888,21 @@
                         >Atendimento em Libras</a
                       >
                     </div>
+                    <div class="informacoes__whatsapp">
+                      <div class="informacoes__whatsapp-titulo">
+                        <img
+                          class="informacoes__atendimento-icone"
+                          src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/d20346db-d162-4873-8518-b8548620acf6___07a0cb802e61ce015e6477828969ca35.svg"
+                          alt="imagem whatsapp"
+                        />
+                        <a class="informacoes__link" href=""
+                          >Whatsapp Reserva</a
+                        >
+                      </div>
+                      <p class="informacoes__horarios">
+                        Segunda a Sexta: 08h às 20h <br />Sábados: 08h às 18h
+                      </p>
+                    </div>
                     <div class="informacoes__atendimento-tipos">
                       <img
                         class="informacoes__atendimento-icone"
@@ -907,18 +913,6 @@
                         >Solicite sua troca aqui</a
                       >
                     </div>
-                  </div>
-                  <div class="informacoes__whatsapp">
-                    <div class="informacoes__atendimento-tipos">
-                      <img
-                        class="informacoes__atendimento-icone"
-                        src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/d20346db-d162-4873-8518-b8548620acf6___07a0cb802e61ce015e6477828969ca35.svg"
-                        alt="imagem whatsapp"
-                      />
-                      <a class="informacoes__link" href="">Whatsapp Reserva</a>
-                    </div>
-                    <p>Segunda a Sexta: 08h às 20h</p>
-                    <p>Sábados: 08h às 18h</p>
                   </div>
                 </div>
               </div>
@@ -1083,7 +1077,12 @@
           </div>
         </section>
         <section class="endereco">
-          <p class="endereco__fonte">AREZZO INDUSTRIA E COMERCIO S.A | CNPJ: 16.590.234/0064-50 | Inscrição Estadual: 12297378 | AV ARTHUR ANTONIO SENDAS, 999 - GALPÃO 300 - PARQUE JURITI - SAO JOÃO DE MERITI | CEP: 25585-085 - RJ</p>
+          <p class="endereco__fonte">
+            AREZZO INDUSTRIA E COMERCIO S.A | CNPJ: 16.590.234/0064-50 |
+            Inscrição Estadual: 12297378 | AV ARTHUR ANTONIO SENDAS, 999 -
+            GALPÃO 300 - PARQUE JURITI - SAO JOÃO DE MERITI | CEP: 25585-085 -
+            RJ
+          </p>
         </section>
       </footer>
     </main>

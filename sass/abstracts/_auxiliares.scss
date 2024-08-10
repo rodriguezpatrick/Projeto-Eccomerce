@@ -25,3 +25,19 @@ $cor-cinza-mais-claro: #ededed;
   justify-content: $justify;
   gap: $gap;
 }
+
+@mixin respond($tamanho) {
+  @if $tamanho == small {
+    @media (max-width: 30em) {
+      @content;
+    }
+  } @else if $tamanho == medium {
+    @media (max-width: 59.375em) {
+      @content;
+    }
+  } @else if $tamanho == big{
+    @media(max-width: 80rem){
+      @content
+    }
+  }
+}

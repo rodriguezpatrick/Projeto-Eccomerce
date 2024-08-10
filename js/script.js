@@ -80,11 +80,11 @@ setTimeout(function () {
 
 console.log("vamos repetir novamente");
 
-// -------------------------------------------------------Funcionamento inicial 
+// -------------------------------------------------------Funcionamento inicial
 
 // o cerne de como isso aqui vai funcionar depende do item atual e os itens anteriores e os itens atuais. Vamos pensar nesse problema como se fosse uma ferramenta real. Imagine que isso realmente fosse um sistema mecânico que deve girar de acordo com a quantidade de imagens existentes.
-// Vamos escolher essa lista de imagens 
-// vamos definir um item como atual. Isso é intuitivo pois vai ser o primeiro elemento da lista. O nosso ciclo deve começar por ele. 
+// Vamos escolher essa lista de imagens
+// vamos definir um item como atual. Isso é intuitivo pois vai ser o primeiro elemento da lista. O nosso ciclo deve começar por ele.
 // Agora precisamos fazer uma função que tenha como parametro o índice correspondente a imagem da lista, no começo vai o zero.
 // Eu quero que a primeira imagem apareça enquanto o rolador se preencha totalmente, então eu vou ter que adicionar uma classe "carrossel__preenchimento--completo". A animação dessa mudança de classe nós fazemos utilizando o css então não é necessário se preocupar com isso no javascript
 // Para que o rolador comece assim que o outro termina enquanto as imagens mudam em sincronia nós temos que ver qual foi o tempo que colocamos na transição da animação do rolador e colocar esse mesmo valor para a função setTimeout. Também colocamos uma transição no css das imagens para não mudarem abruptamente
@@ -104,8 +104,33 @@ console.log("vamos repetir novamente");
 
 // ---------------------------------------------------------Reescrita do código para se encaixar com o ciclo
 
-// Quando estamos aprendendo a escrever o código fazemos ele em etapas. Porém, nesse caso se formos parar para analisar as etapas olhando o código você não consegue, pois ele foi manipulado para que o ciclo funcione com apenas um código. Para que isso funcione as vezes vamos ver coisas que fogem desse algoritmo linear. Por isso em uma primeira leitura fica dificil de ler pois o código já é estruturado de forma a receber parâmetros futuros, contas futuras ao invés de ter etapas separadas para cada etapa. 
+// Quando estamos aprendendo a escrever o código fazemos ele em etapas. Porém, nesse caso se formos parar para analisar as etapas olhando o código você não consegue, pois ele foi manipulado para que o ciclo funcione com apenas um código. Para que isso funcione as vezes vamos ver coisas que fogem desse algoritmo linear. Por isso em uma primeira leitura fica dificil de ler pois o código já é estruturado de forma a receber parâmetros futuros, contas futuras ao invés de ter etapas separadas para cada etapa.
 // Acredito que quem tenha feito o código escreveu na menor forma possível, mas que a funcionalidade esteja funcionando corretamente.
 // Ás vezes estamos olhando para um código que está aprimorado, então é dificil de ver a forma nativa do código, que é a mais fácil pois tem logaritmo linear.
 // A seguinte questão é: voce tem algumas dicas para desconstruirmos um código aprimorado? Como fazer o caminho contrário?
 // "Imagine que você tem um quebra cabeça com milhares de peças e você não teve a oportunidade de ver a foto da capa. Será que ficaria fácil de você pegar uma peça e começar sem saber aonde você vai? Agora imagine um quebra cabeça pronto. Você olha e entende exatamente onde essas peças se encaixam no todo. Através dessa abordagem de desconstrução você entende melhor cada um dos detalhes"
+
+// script para abrir e fechar o cabecalho
+
+var eleCabecalhoMenu = document.querySelector(".cabecalho__menu");
+var eleCabecalho = document.querySelector(".cabecalho");
+var elemsItemLista = document.querySelectorAll(".cabecalho__item-lista");
+
+eleCabecalhoMenu.addEventListener("click", function () {
+  eleCabecalho.classList.toggle("cabecalho--aberto");
+  // assim que o cabecalho estiver aberto ele vai cancelar todos os links cabecalho__link. caso contrario os links ainda existem.
+  // isso aqui faz sentido por que queremos que isso aconteça apenas quando a tela for menor que 950px. Eu escolhi essa maneira de fazer, mas também poderia falar que quando a tela for menor que tal coisa, então cancele os links
+  elemsItemLista.forEach(function(ele){
+    ele.querySelector('.cabecalho__link').href = 'javascript: void(0)'
+  })
+});
+
+// script para abrir e fechar o cabecalho em 950px
+
+
+elemsItemLista.forEach(function (ele) {
+  ele.addEventListener("click", function () {
+    ele.classList.toggle("cabecalho__item-lista--aberto");
+  });
+
+});

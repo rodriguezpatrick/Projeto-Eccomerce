@@ -1,20 +1,165 @@
 .cabecalho {
-  @include flex($align: center, $justify: space-between);
+  @include flex($align: center, $justify: space-between, $gap: 1.6rem);
   position: relative;
   padding: 0 2.5rem;
   background-color: $cor-branca;
   z-index: 99;
+  width: 100%;
+
+  &--aberto {
+    // isso aqui é uma classe que não colocamos nenhuma propriedade css nela pois ela só serve para mudar as características de outros containers. Óbvio que pensamos estrategicamente para colocar uma classe secundária no mesmo lugar que abrange os elementos que queremos trocar de classe conforme ocorre o evento de click. Temos que nos perguntar o que tem dentro dessa classe aberto. Toda vez que colocamos essa classe aberto ela é uma cópia da original, uma gêmea. E para descobrir isso é necessário muita prática.
+    // parei para pensar sem olhar o Diego falando e acredito que seja
+    // eu tenho que lembrar que a estilização do sanduiche sempre tem que estar aqui. As classes que vao mudar lá no html.
+    // Por que ele coloca duas vezes? Será que é por que vai ser mais fácil de puxar no javascript esses elementos?
+    & .cabecalho__menu {
+      &-x {
+        display: block;
+      }
+      &-sanduiche {
+        display: none;
+      }
+    }
+
+    & .cabecalho__navegacao {
+      @include respond(medium) {
+        @include flex();
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $cor-branca;
+        min-width: 100%;
+        transform: translateX(0);
+        transition: transform ease-in 200ms;
+      }
+    }
+
+    & .cabecalho__lista {
+      @include respond(medium) {
+        @include flex($direction: column);
+        padding: 0;
+      }
+    }
+
+    & .cabecalho__item-lista {
+      @include respond(medium) {
+        padding: 0;
+        @include flex($direction: column, $justify: start);
+        position: static;
+
+        &:hover {
+          & .cabecalho-escondido {
+            display: none;
+          }
+        }
+
+        &--aberto {
+          & .cabecalho-escondido {
+            display: flex;
+          }
+          &:hover {
+            & .cabecalho-escondido {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+    & .cabecalho__link {
+      border-width: 0;
+      border-bottom: 1px solid lighten($cor-cinza-claro, 20%);
+      border-top: 1px solid lighten($cor-cinza-claro, 20%);
+      padding: 2rem 2rem;
+      @include flex($justify: space-between, $align: start);
+      &::after {
+        content: "\276F";
+        transform: rotate(90deg);
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    & .cabecalho-escondido {
+      @include flex($display: none);
+      position: static;
+      background-color: lighten($cor-cinza-mais-claro, 5%);
+      padding: 1.5rem 3.12rem;
+      &__titulo {
+        display: none;
+      }
+      &__imagem {
+        display: none;
+      }
+      &__tipo {
+        flex-direction: column;
+        &--aberto {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__menu-sanduiche {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    @include respond(medium) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    display: none;
+    width: 3rem;
+    @include respond(medium) {
+      display: block;
+      cursor: pointer;
+    }
+    &-x {
+      display: none;
+      font-size: 3.12rem;
+    }
+  }
+
   &__container {
     @include flex($align: center, $gap: 6.1rem);
+    width: 100%;
+    @include respond(medium) {
+      justify-content: center;
+    }
   }
+
+  &__link-logo {
+    @include respond(medium) {
+      padding: 3.7rem 0;
+    }
+  }
+
   &__logo {
     width: 15rem;
     margin-bottom: 2px;
+    min-width: 15rem;
   }
+
+  &__navegacao {
+    // O cabecalho__navegacao inicialmente ficou muito pequeno por que nao haviamos colocado o campo de input no cabecalho. Vamos ter que colocar ele como width 100% para ocupar todo o espaço e depois colocar um max-width para ele ficar de um tamanho fixo.
+    @include flex($justify: space-between);
+    width: 100%;
+    max-width: 81rem;
+    @include respond(medium) {
+      display: none;
+    }
+  }
+
   &__lista {
-    @include flex($gap: 2rem);
+    @include flex($justify: space-between, $gap: 2rem);
     list-style-type: none;
+    width: 100%;
+    @include respond(small) {
+      display: none;
+    }
   }
+
   &__link {
     font-size: 1.33rem;
     text-decoration: none;
@@ -22,9 +167,14 @@
     font-weight: 600;
     color: inherit;
     line-height: 1;
-    border-bottom: solid 2px transparent;
+    border-width: solid 2px transparent;
+    &-icone {
+      @include respond(big) {
+        width: 2.2rem;
+      }
+    }
     &:hover {
-      border-bottom: solid 2px currentColor;
+      border-width: solid 2px currentColor;
     }
 
     &-icone {
@@ -46,6 +196,7 @@
         }
       }
     }
+
     &--ofertas {
       color: $cor-vermelha;
       border-bottom: solid 2px transparent;
@@ -79,8 +230,15 @@
     fill: currentColor;
     width: 2rem;
     height: 2rem;
+    @include respond(big) {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
     &--menor {
       width: 1.6rem;
+      @include respond(big) {
+        width: 1.78rem;
+      }
       transition: transform ease-in 200ms;
     }
 
@@ -167,7 +325,7 @@
   box-shadow: 0 0 0.1rem rgba($cor-preta, 10%);
 
   &__tipo {
-    @include flex($direction: column, $gap: 2rem);
+    @include flex($gap: 2rem);
   }
   &__titulos {
     @include flex($gap: 3rem);
@@ -181,7 +339,7 @@
     font-weight: 500;
   }
   &__conteudos {
-    @include flex($direction: column, $wrap: wrap, $gap: 1.02rem);
+    @include flex($direction: column, $wrap: wrap, $gap: 2rem);
   }
   &__conteudo {
     list-style: none;
