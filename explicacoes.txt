@@ -1,0 +1,60 @@
+Aqui está o css que eu fiz, achando que estava correto
+
+ &__menu-sanduiche {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    @include respond(medium) {
+      display: block;
+    }
+  }
+
+  &__menu-x{
+    display: none;
+    font-size: 3.12rem;
+    cursor: pointer;
+    @include respond(medium) {
+      display: none;
+    }
+  }
+
+  Aqui temos o css que o Diego fez 
+
+  &__menu {
+    display: none;
+    width: 2.2rem;
+    cursor: pointer;
+
+    @include respond(medium) {
+      display: block;
+    }
+
+    &-x {
+      display: none;
+      font-weight: 500;
+      font-size: 2.4rem;
+      text-align: center;
+    }
+  }
+
+  A minha dúvida era de que por que ele não colocou uma media query para o x. Senão ele aparece na página inicial também por que é esse pensamento que eu tenho quando eu adiciono uma media query ao sanduiche. O sanduiche tem uma media query por isso.
+   Entretanto, quando o sanduiche aparece quando a tela está como a tela de um tablet, isso é verdade. Porém o x só vai aparecer quando houver um evento de click no sanduiche. Não tem como isso acontecer quando o sanduiche não aparece. 
+    Por isso não colocamos uma media query no x.
+
+
+Tá, mas e agora por que o Diego fez outra classe assim? Por que ele não colocou tudo de uma vez dentro de --aberto?
+
+&--aberto {
+    & .cabecalho__menu {
+      &-x {
+        display: block;
+      }
+
+      &-icone {
+        display: none;
+      }
+    }
+}
+
+ Eu acredito que 

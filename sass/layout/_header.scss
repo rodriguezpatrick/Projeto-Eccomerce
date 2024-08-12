@@ -1,9 +1,10 @@
 .cabecalho {
   @include flex($align: center, $justify: space-between, $gap: 1.6rem);
-  position: relative;
+  position: sticky;
+  top: 0;
   padding: 0 2.5rem;
   background-color: $cor-branca;
-  z-index: 99;
+  z-index: 999;
   width: 100%;
 
   &--aberto {
@@ -21,68 +22,23 @@
     }
 
     & .cabecalho__navegacao {
-      @include respond(medium) {
-        @include flex();
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: $cor-branca;
-        min-width: 100%;
-        transform: translateX(0);
-        transition: transform ease-in 200ms;
+      transform: translate(0);
+      &::-webkit-scrollbar {
+        display: none;
       }
     }
+    // Haviamos colocado aqui essas classes. Depois tivemos que mudar para fazer a transição do menu aberto e fechado
+    // & .cabecalho__lista {
 
-    & .cabecalho__lista {
-      @include respond(medium) {
-        @include flex($direction: column);
-        padding: 0;
-      }
-    }
+    // }
 
-    & .cabecalho__item-lista {
-      @include respond(medium) {
-        padding: 0;
-        @include flex($direction: column, $justify: start);
-        position: static;
+    // & .cabecalho__item-lista {
 
-        &:hover {
-          & .cabecalho-escondido {
-            display: none;
-          }
-        }
+    // }
+    // & .cabecalho__link {
 
-        &--aberto {
-          & .cabecalho-escondido {
-            display: flex;
-          }
-          &:hover {
-            & .cabecalho-escondido {
-              display: flex;
-            }
-          }
-        }
-      }
-    }
-    & .cabecalho__link {
-      border-width: 0;
-      border-bottom: 1px solid lighten($cor-cinza-claro, 20%);
-      border-top: 1px solid lighten($cor-cinza-claro, 20%);
-      padding: 2rem 2rem;
-      @include flex($justify: space-between, $align: start);
-      &::after {
-        content: "\276F";
-        transform: rotate(90deg);
-      }
-      &:hover {
-        text-decoration: none;
-      }
-    }
+    // }
     & .cabecalho-escondido {
-      @include flex($display: none);
-      position: static;
-      background-color: lighten($cor-cinza-mais-claro, 5%);
-      padding: 1.5rem 3.12rem;
       &__titulo {
         display: none;
       }
@@ -146,8 +102,25 @@
     @include flex($justify: space-between);
     width: 100%;
     max-width: 81rem;
+
     @include respond(medium) {
-      display: none;
+      @include flex($direction: column);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: $cor-branca;
+      min-width: 100%;
+      transform: translateX(0);
+      transition: transform ease-in-out 0.5s;
+      height: 100vh;
+      max-height: calc(100vh - 89px);
+      overflow-y: scroll;
+      position: absolute;
+      transform: translateX(-127%);
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 
@@ -157,6 +130,10 @@
     width: 100%;
     @include respond(small) {
       display: none;
+    }
+    @include respond(medium) {
+      @include flex($direction: column);
+      padding: 0;
     }
   }
 
@@ -209,6 +186,20 @@
         border-bottom: none;
       }
     }
+    @include respond(medium) {
+      border-width: 0;
+      border-bottom: 1px solid lighten($cor-cinza-claro, 20%);
+      border-top: 1px solid lighten($cor-cinza-claro, 20%);
+      padding: 2rem 2rem;
+      @include flex($justify: space-between, $align: start);
+      &::after {
+        content: "\276F";
+        transform: rotate(90deg);
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   &__item-lista {
@@ -217,6 +208,31 @@
       border-bottom-color: currentColor;
       & .cabecalho-escondido {
         @include flex($display: flex, $align: start, $gap: 2.5rem);
+      }
+    }
+    @include respond(medium) {
+      padding: 0;
+      @include flex($direction: column, $justify: start);
+      position: static;
+
+      // &:hover {
+      //   & .cabecalho-escondido {
+      //     display: none;
+      //   }
+      // }
+
+      &--aberto {
+        & .cabecalho-escondido {
+          // display: flex;
+          max-height: 1000px;
+          padding: 0;
+          // margin: 0 2rem 0 4rem;
+        }
+        &:hover {
+          & .cabecalho-escondido {
+            display: flex;
+          }
+        }
       }
     }
   }
@@ -324,12 +340,34 @@
   top: 100%;
   box-shadow: 0 0 0.1rem rgba($cor-preta, 10%);
 
+  @include respond(medium) {
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    // margin: 0 2rem 0 4rem;
+    border-width: 0;
+    position: static;
+    transition: max-height ease-in 200ms;
+    background-color: lighten($cor-cinza-mais-claro, 5%);
+    transition: max-height ease-in-out .3s;
+    
+  }
+
   &__tipo {
     @include flex($gap: 2rem);
+    @include respond(medium){
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
   }
   &__titulos {
     @include flex($gap: 3rem);
     list-style: none;
+    @include respond(medium){
+      width: 100%;
+    }
   }
   &__titulo {
     text-decoration: none;
@@ -340,6 +378,17 @@
   }
   &__conteudos {
     @include flex($direction: column, $wrap: wrap, $gap: 2rem);
+    @include respond(medium){
+      margin: 0 2rem 0 4rem;
+      margin-top: 2rem;
+      &:nth-child(2){
+        margin-top: 2rem;
+      }
+      &:last-child{
+        margin-bottom: 2rem;
+      }
+
+    }
   }
   &__conteudo {
     list-style: none;
@@ -358,6 +407,27 @@
   }
   &__imagem {
     width: 30rem;
+    @include respond(medium){
+      display: none;
+    }
+  }
+}
+
+.banner-prime{
+  & a{
+      & img{
+          &:last-child{
+              display: none;
+          }
+          @include respond(medium){
+              &:first-child{
+                  display: none;
+              }
+              &:last-child{
+                  display: block;
+              }
+          }
+      }
   }
 }
 

@@ -3,4 +3,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.82rem;
+    @include respond(small){
+        display: flex;
+        flex-direction: column;
+    }
 }
+
