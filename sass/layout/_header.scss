@@ -301,6 +301,16 @@
     transform: translate(2%, 10%);
     &--aberto {
       display: none;
+      gap: 1.92rem;
+      width: max-content;
+      & .cabecalho__link{
+        padding: 0rem;
+        width: 100%;
+        border-width: 0;
+        &::after{
+          content: "";
+        }
+      }
     }
     &::before {
       content: "";

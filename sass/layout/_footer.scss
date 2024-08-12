@@ -118,10 +118,17 @@
       width: 100%;
       max-width: 66rem;
     }
+    @include respond(small){
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__caixa {
     @include flex($direction: column, $gap: 0.65rem, $align: start);
+    @include respond(small){
+      align-items: center;
+    }
   }
 
   &__caixa-acessibilidade {
@@ -236,6 +243,10 @@
   padding: 4.5rem 1.28rem;
   opacity: 0.6;
   filter: grayscale(1);
+  @include respond(small){
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__cabecalho {
     @include flex(
@@ -254,18 +265,25 @@
       $gap: 1rem
     );
     max-width: 19rem;
+    @include respond(small){
+      max-width: none;
+      width: 100%;
+    }
   }
 
   &__icones {
-    width: 5rem;
+    max-height: 5rem;
+    width: auto;
   }
 
   &__titulo {
     font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
   }
 
   &__texto {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
   }
 }
@@ -275,8 +293,11 @@
   padding: 2.5rem 1.28rem;
   @include respond(medium){
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 3.12rem;
     justify-content: center;
+    @include respond(small){
+      flex-direction: column;
+    }
   }
   &__caixa {
     @include flex(

@@ -347,6 +347,11 @@ li {
   justify-content: start;
   gap: 2.5rem;
 }
+@media (max-width: 59.375em) {
+  .rodape {
+    gap: 0;
+  }
+}
 
 .newsletter {
   padding: 2.5rem 1.28rem;
@@ -515,12 +520,23 @@ li {
     max-width: 66rem;
   }
 }
+@media (max-width: 30em) {
+  .informacoes__sobre {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .informacoes__caixa {
   display: flex;
   flex-flow: column nowrap;
   align-items: start;
   justify-content: start;
   gap: 0.65rem;
+}
+@media (max-width: 30em) {
+  .informacoes__caixa {
+    align-items: center;
+  }
 }
 .informacoes__caixa-acessibilidade {
   display: flex;
@@ -663,6 +679,11 @@ li {
   opacity: 0.6;
   filter: grayscale(1);
 }
+@media (max-width: 30em) {
+  .compras {
+    flex-direction: column;
+  }
+}
 .compras__cabecalho {
   display: flex;
   flex-flow: column nowrap;
@@ -697,12 +718,24 @@ li {
   gap: 0;
   padding: 2.5rem 1.28rem;
 }
+@media (max-width: 59.375em) {
+  .marcas {
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+  }
+}
 .marcas__caixa {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+@media (max-width: 59.375em) {
+  .marcas__caixa--reserva {
+    order: -1;
+  }
 }
 .marcas__titulo {
   font-size: 1.6rem;
@@ -1148,6 +1181,8 @@ li {
 }
 @media (max-width: 59.375em) {
   .cabecalho-escondido__tipo {
+    flex-direction: column;
+    gap: 0;
     width: 100%;
   }
 }
@@ -1178,6 +1213,18 @@ li {
   justify-content: start;
   gap: 2rem;
 }
+@media (max-width: 59.375em) {
+  .cabecalho-escondido__conteudos {
+    margin: 0 2rem 0 4rem;
+    margin-top: 2rem;
+  }
+  .cabecalho-escondido__conteudos:nth-child(2) {
+    margin-top: 2rem;
+  }
+  .cabecalho-escondido__conteudos:last-child {
+    margin-bottom: 2rem;
+  }
+}
 .cabecalho-escondido__conteudo {
   list-style: none;
   color: #585858;
@@ -1195,6 +1242,23 @@ li {
 }
 .cabecalho-escondido__imagem {
   width: 30rem;
+}
+@media (max-width: 59.375em) {
+  .cabecalho-escondido__imagem {
+    display: none;
+  }
+}
+
+.banner-prime a img:last-child {
+  display: none;
+}
+@media (max-width: 59.375em) {
+  .banner-prime a img:first-child {
+    display: none;
+  }
+  .banner-prime a img:last-child {
+    display: block;
+  }
 }
 
 .pesquisa {
@@ -1222,6 +1286,11 @@ li {
   aspect-ratio: 1330/450.5;
   overflow: hidden;
 }
+@media (max-width: 59.375em) {
+  .carrossel {
+    aspect-ratio: 1024/1048.88;
+  }
+}
 .carrossel__banners {
   display: flex;
   flex-flow: row nowrap;
@@ -1233,6 +1302,17 @@ li {
 .carrossel__banner {
   min-width: 100%;
   height: 100%;
+}
+.carrossel__banner a img:last-child {
+  display: none;
+}
+@media (max-width: 59.375em) {
+  .carrossel__banner a img:first-child {
+    display: none;
+  }
+  .carrossel__banner a img:last-child {
+    display: block;
+  }
 }
 .carrossel__roladores {
   display: flex;
@@ -1266,6 +1346,12 @@ li {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.82rem;
+}
+@media (max-width: 30em) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .descontos__beneficios {
