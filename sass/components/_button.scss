@@ -1,0 +1,10 @@
+.botao{
+    padding: 0.65rem 1rem;
+    border-radius: 0.5rem;
+    border: 0;
+    color: $cor-branca;
+    cursor: pointer;
+    &--verde{
+        background-color: $cor-verde-claro;
+    }
+}

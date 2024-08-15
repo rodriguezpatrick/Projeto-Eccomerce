@@ -28,3 +28,26 @@ li{
   list-style: none;
 }
 
+.principal {
+  @include flex($gap: 2.5rem);
+  padding: 0 2rem;
+}
+
+// Largura da barra de rolagem
+
+// webkit scroll bar
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+
+// linha de trem
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 3rem;
+  background: #bdbdbd;
+}
