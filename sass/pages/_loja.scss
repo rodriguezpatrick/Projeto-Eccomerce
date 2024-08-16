@@ -1,10 +1,28 @@
+.filtrar-menu{
+  & .filtrar{
+    transform: translateX(0%);
+  }
+}
+
 .filtrar {
+  position: relative;
   @include flex($direction: column, $gap: 2rem);
   min-width: 31rem;
   width: 31rem;
-  max-height: 60rem;
   padding: 1rem;
   overflow: scroll;
+  transition: transform ease-in-out .3s;
+  @include respond(medium){
+    position: fixed;
+    background-color: $cor-branca;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    width: 100%; 
+    height: 100%;
+    transform: translateX(100%);
+    padding: 2.5rem;
+  }
 
   &__cabecalho {
     @include flex($gap: 1.02rem);
@@ -134,26 +152,91 @@
       font-weight: 700;
     }
   }
+  &__fechar{
+    display: none;
+    @include respond(medium){
+      @include flex($justify:center, $align: center);
+      position: absolute;
+      font-size: 1.92rem;
+      top: 2rem;
+      right: 2rem;
+      border-radius: 50%;
+      padding: 1.6rem;
+      border: 1px solid $cor-preta;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+    }
+  }
 }
 
 .produtos {
   @include flex($direction: column, $justify: space-between, $gap: 3.12rem);
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0;
+  @include respond(medium){
+    padding: 0;
+  }
   &__cabecalho {
     @include flex($justify: space-between);
+    @include respond(medium){
+      justify-content: center;
+      gap: 2rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: $cor-branca;
+      z-index:998;
+      padding: 2rem;
+      width: 100%;
+      padding: 2.5rem 1.28rem;
+
+    }
   }
   &__ordenar-cabecalho {
     @include flex($gap: 0.65rem);
   }
   &__sortarrows {
     width: 2rem;
+    @include respond(medium){
+      display: none;
+    }
+  }
+  &__botao{
+    display: none;
+    @include respond(medium){
+      display: block;
+      padding: .6rem 1rem;
+      background-color: $cor-branca;
+      border: 1px solid $cor-preta;
+      font-weight: 500;
+    }
+  }
+  &__ordenar{
+    @include respond(medium){
+      display: none;
+    }
+  }
+  &__itens{
+    @include respond(medium){
+      display: none;
+    }
   }
   &__imagens {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 1.6rem;
     row-gap: 4.9rem;
+    @include respond(small){
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.02rem;
+    }
+    @include respond(medium-small){
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+      row-gap: 2rem;
+      
+    }
   }
   // &__imagem{
   //   width: 30rem;
@@ -165,6 +248,12 @@
     padding: 0.1rem;
     border-radius: 0.4rem;
     cursor: pointer;
+    @include respond(medium){
+      padding: .6rem 1rem;
+      border-radius: 0;
+      font-weight: 500;
+      border: 1px solid $cor-preta;
+    }
   }
   &__nome {
     font-size: 1.6rem;

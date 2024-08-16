@@ -1,53 +1,59 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   font-size: 62.5%;
-  @include respond(big){
+  @include respond(big) {
     font-size: 56.75%;
   }
 }
 
-body{
+body {
+  position: relative;
   font-family: Inter, sans-serif;
   font-size: 1.33rem;
   line-height: 1.4;
   background-color: $cor-branca;
 }
 
-img{
+img {
   width: 100%;
   max-width: 100%;
   display: block;
 }
 
-li{
+li {
   list-style: none;
 }
 
 .principal {
   @include flex($gap: 2.5rem);
-  padding: 0 2rem;
+  padding: 2rem 2rem 7.63rem 2rem;
+  @include respond(medium) {
+    padding: 2rem 2rem 7.63rem 2rem;
+  }
+  @include respond(small) {
+    padding: 1.02rem 1.02rem 7.63rem 1.02rem;
+  }
 }
 
 // Largura da barra de rolagem
 
 // webkit scroll bar
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 5px;
 }
 
-
 // linha de trem
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: transparent;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   border-radius: 3rem;
   background: #bdbdbd;
 }

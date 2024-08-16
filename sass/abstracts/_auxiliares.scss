@@ -33,6 +33,10 @@ $cor-azul: #0000ff;
     @media (max-width: 30em) {
       @content;
     }
+  } @else if $tamanho == medium-small {
+    @media (max-width: 46.875em) {
+      @content;
+    }
   } @else if $tamanho == medium {
     @media (max-width: 59.375em) {
       @content;
