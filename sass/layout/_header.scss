@@ -2,10 +2,13 @@
   @include flex($align: center, $justify: space-between, $gap: 1.6rem);
   position: sticky;
   top: 0;
-  padding: 0 2.5rem;
+  padding: 0 4.88rem;
   background-color: $cor-branca;
   z-index: 999;
   width: 100%;
+  @include respond(medium){
+    padding: 0 3.12rem;
+  }
 
   &--aberto {
     // isso aqui é uma classe que não colocamos nenhuma propriedade css nela pois ela só serve para mudar as características de outros containers. Óbvio que pensamos estrategicamente para colocar uma classe secundária no mesmo lugar que abrange os elementos que queremos trocar de classe conforme ocorre o evento de click. Temos que nos perguntar o que tem dentro dessa classe aberto. Toda vez que colocamos essa classe aberto ela é uma cópia da original, uma gêmea. E para descobrir isso é necessário muita prática.
@@ -203,7 +206,7 @@
   }
 
   &__item-lista {
-    padding: 3.9rem 0;
+    padding: 3.12rem 0;
     &:hover {
       border-bottom-color: currentColor;
       & .cabecalho-escondido {

@@ -1,10 +1,20 @@
-.botao{
-    padding: 0.65rem 1rem;
-    border-radius: 0.5rem;
-    border: 0;
-    color: $cor-branca;
-    cursor: pointer;
-    &--verde{
-        background-color: $cor-verde-claro;
+.botao {
+  padding: 0.65rem 1rem;
+  border-radius: 0.5rem;
+  border: 0;
+  color: $cor-branca;
+  cursor: pointer;
+  &--verde {
+    background-color: $cor-verde-claro;
+  }
+  &--produto {
+    font-size: 1.6rem;
+    font-weight: 100;
+    padding: 1.6rem 1rem;
+    border-radius: 1rem;
+    &:hover{
+        background-color: $cor-verde-escuro;
+        transition: background-color ease-in 0.1s;
     }
+  }
 }

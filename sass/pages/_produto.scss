@@ -1,0 +1,166 @@
+.principal__produto {
+  @include flex($direction: column, $gap: 7.63rem);
+  padding: 0 0 7.63rem 0;
+  overflow: hidden;
+}
+
+.produto {
+  @include flex($gap: 3.12rem);
+  padding: 0 4.88rem;
+  @include respond(medium) {
+    padding: 0 3.12rem;
+  }
+  @include respond(medium-small) {
+    flex-direction: column;
+  }
+  &__carrossel {
+    @include flex(
+      $direction: column,
+      $gap: 2rem,
+      $justify: center,
+      $align: center
+    );
+    transform: translateX(0%);
+    overflow: hidden;
+  }
+  &__carrossel-botoes {
+    @include flex($gap: 1rem);
+    display: none;
+    @include respond(medium-small) {
+      @include flex($gap: 1rem);
+    }
+  }
+  &__carrossel-botao {
+    @include respond(medium-small) {
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: $cor-cinza-claro;
+      cursor: pointer;
+      border-radius: 50%;
+      &--clicado {
+        background-color: $cor-cinza;
+      }
+    }
+  }
+
+  &__fotos {
+    @include flex($wrap: wrap, $gap: 1rem);
+
+    @include respond(medium-small) {
+      @include flex($wrap: nowrap);
+      transform: translateX(0%);
+    }
+  }
+  &__foto {
+    width: calc(50% - 0.5rem);
+    @include respond(medium-small) {
+      min-width: 100%;
+      // lembrando que ate agora nao tinhamos colocado nenhum tamanho especifico para as imagens. Então como eu vou saber qual é o tamanho padrão do container antes dele se adaptar para encaixar as imagens  dele?
+    }
+  }
+  &__caminhos {
+    & p {
+     & a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+  &__container-texto {
+    @include flex($direction: column, $gap: 3.12rem);
+    max-width: 33%;
+    @include respond(medium-small) {
+      max-width: none;
+    }
+  }
+  &__informacoes {
+    @include flex($direction: column, $gap: 1.6rem);
+  }
+  &__nome {
+    font-size: 3.98rem;
+    font-family: serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  &__preco {
+    font-size: 3.32rem;
+  }
+  &__container-cores {
+    @include flex($direction: column, $gap: 0.82rem);
+  }
+  &__container-cor {
+    @include flex($gap: 0.82rem);
+  }
+  &__cor {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: $cor-indigo;
+    cursor: pointer;
+    &--selecionado {
+      border: 0.1px solid $cor-preta;
+      transform: scale(1.1);
+    }
+  }
+  &__container-tamanhos {
+    @include flex($direction: column, $gap: 0.82rem);
+  }
+  &__container-tamanho {
+    @include flex($gap: 1.02rem);
+  }
+  &__tamanho {
+    @include flex($justify: center, $align: center);
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 3rem;
+    height: 3rem;
+    border: 0.1px solid $cor-preta;
+    cursor: pointer;
+    &--selecionado {
+      color: $cor-branca;
+      background-color: $cor-preta;
+      transform: scale(1.1);
+    }
+  }
+  &__descricao {
+    @include flex($direction: column, $gap: 2rem);
+    border-bottom: 1px solid $cor-cinza-claro;
+    padding: 2rem 0;
+  }
+  &__descricao-titulo {
+    font-size: 1.6rem;
+    &--produto {
+      padding: 2.5rem 0rem;
+      border-top: 1px solid $cor-cinza-claro;
+      border-bottom: 1px solid $cor-cinza-claro;
+      font-weight: 700;
+    }
+  }
+  &__descricao-texto {
+    font-size: 1.6rem;
+    font-family: serif;
+  }
+}
+
+.similares {
+  @include flex($direction: column, $gap: 4.88rem);
+  padding: 0 4.88rem;
+  @include respond(medium-small) {
+    padding: 0 2.5rem;
+    gap: 2.5rem;
+  }
+  &__titulo {
+    font-size: 2.78rem;
+  }
+  &__produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+    @include respond(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond(medium-small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
