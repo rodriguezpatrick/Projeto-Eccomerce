@@ -1448,6 +1448,15 @@ li {
   background-color: #2e8c58;
   transition: background-color ease-in 0.1s;
 }
+.botao--carrinho {
+  border-radius: 0;
+  font-size: 1.6rem;
+  padding: 1.6rem 0;
+}
+.botao--carrinho:hover {
+  background-color: #2e8c58;
+  transition: background-color ease-in 0.1s;
+}
 
 .range_container {
   display: flex;
@@ -2022,6 +2031,10 @@ input[type=range] {
     min-width: 100%;
   }
 }
+.produto__caminhos p a {
+  text-decoration: none;
+  color: inherit;
+}
 .produto__container-texto {
   display: flex;
   flex-flow: column nowrap;
@@ -2162,6 +2175,176 @@ input[type=range] {
   .similares__produtos {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.cabecalho--carrinho .cabecalho__navegacao {
+  display: none;
+}
+.cabecalho--carrinho .cabecalho__icones {
+  display: none;
+}
+.cabecalho--carrinho .cabecalho__container {
+  justify-content: center;
+  padding: 3.12rem;
+}
+@media (max-width: 59.375em) {
+  .cabecalho--carrinho .cabecalho__container {
+    padding: 0;
+  }
+}
+
+.carrinho {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: start;
+  justify-content: start;
+  gap: 3.9rem;
+  background-color: #ededed;
+  padding: 9.54rem 3.12rem;
+}
+.carrinho__sacola {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 3.12rem;
+}
+.carrinho__cabecalho {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1rem;
+}
+.carrinho__titulo {
+  font-size: 2.76rem;
+  font-weight: 700;
+  font-family: serif;
+}
+.carrinho__texto {
+  font-size: 1.6rem;
+}
+.carrinho__texto--verde {
+  color: #2e8c58;
+}
+.carrinho__subtitulos {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+.carrinho__valores {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 6.1rem;
+}
+.carrinho__produtos-selecionados {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
+}
+.carrinho__produto-selecionado {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+  padding: 2rem 0;
+  border-top: 1px solid #ededed;
+}
+.carrinho__container-info {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
+}
+.carrinho__imagem {
+  width: 7rem;
+}
+.carrinho__numeros {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3.12rem;
+  font-size: 1.6rem;
+}
+.carrinho__preco {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 0;
+}
+.carrinho__controles {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 0.65rem;
+}
+.carrinho__controle {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.carrinho__container-info {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.82rem;
+}
+.carrinho__info-produto {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.65rem;
+  font-size: 1.33rem;
+}
+.carrinho__texto-negrito {
+  font-weight: 700;
+}
+.carrinho__qntd {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
+  min-width: 47rem;
+}
+.carrinho__qntd-caixa {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+  padding: 2rem 0;
+}
+.carrinho__qntd-caixa:nth-child(2) {
+  border-top: 1px solid #ededed;
+}
+.carrinho__sacola, .carrinho__qntd {
+  padding: 3.9rem;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=style.comp.css.map */
