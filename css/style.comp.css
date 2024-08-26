@@ -2442,7 +2442,7 @@ li {
   flex-flow: row nowrap;
   align-items: stretch;
   justify-content: space-between;
-  gap: 3.12rem;
+  gap: 4.88rem;
   width: 100%;
   background-color: #fff;
   padding: 3.9rem;
@@ -2459,7 +2459,16 @@ li {
   flex-flow: column nowrap;
   align-items: stretch;
   justify-content: start;
+  gap: 2.5rem;
+  padding: 2.5rem 3.12rem;
+}
+.checkout__voltar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: flex-end;
   gap: 0;
+  align-self: flex-end;
 }
 .checkout__caixa {
   display: flex;
@@ -2478,6 +2487,7 @@ li {
 }
 .checkout__caixa--endereco {
   width: 50%;
+  max-width: 62rem;
 }
 @media (max-width: 46.875em) {
   .checkout__caixa--endereco {
@@ -2510,6 +2520,9 @@ li {
   justify-content: center;
   gap: 1rem;
 }
+.checkout__cabecalho--login {
+  display: none;
+}
 .checkout__titulo {
   font-size: 2.76rem;
   font-family: serif;
@@ -2519,15 +2532,16 @@ li {
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;
-  justify-content: start;
-  gap: 3.12rem;
-  width: 60rem;
+  justify-content: space-between;
+  gap: 4.88rem;
+  width: max(60rem, 60rem + (100vw - 83.259rem - 60rem) / 2);
 }
 @media (max-width: 59.375em) {
   .checkout__pagamento {
     flex-direction: column;
     width: 37rem;
     max-width: 100%;
+    justify-content: start;
   }
 }
 @media (max-width: 46.875em) {
@@ -2543,12 +2557,15 @@ li {
   gap: 0.65rem;
 }
 .checkout__enderecos-itens {
-  display: block;
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
   justify-content: start;
   gap: 2rem;
+  display: none;
+}
+.checkout__enderecos-itens--aberto {
+  display: flex;
 }
 .checkout__endereco-item {
   position: relative;
@@ -2560,6 +2577,7 @@ li {
   border-radius: 0.3rem;
   border: 1px solid #585858;
   z-index: 11111;
+  padding: 0 1rem;
 }
 .checkout__input[type=number]::-webkit-inner-spin-button, .checkout__input[type=number]::-webkit-outer-spin-button {
   display: none;
@@ -2572,6 +2590,46 @@ li {
   left: 1rem;
   transform: translateY(-50%);
   line-height: 1;
+}
+
+.minha-conta {
+  padding: 9.54rem 3.12rem;
+  background-color: #ededed;
+}
+.minha-conta__caixa {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 2.5rem;
+  background-color: #fff;
+  max-width: 100rem;
+  margin: auto;
+  padding: 3.9rem;
+}
+.minha-conta__titulo {
+  font-size: 2.76rem;
+  font-family: serif;
+  font-weight: 400;
+}
+.minha-conta__inputs {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1rem;
+  background-color: #ededed;
+  padding: 3.9rem;
+  border-radius: 0.5rem;
+}
+.minha-conta__input {
+  background-color: #ededed;
+}
+.minha-conta__label {
+  background-color: #ededed;
+}
+.minha-conta__endereco-item {
+  width: calc(50% - 0.5rem);
 }
 
 /*# sourceMappingURL=style.comp.css.map */

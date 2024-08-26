@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <header class="cabecalho cabecalho--carrinho">
+    <header class="cabecalho">
       <div class="cabecalho__menu">
         <img
           class="cabecalho__menu-sanduiche"
@@ -607,131 +607,44 @@
       </div>
     </header>
     <main>
-      <section class="carrinho">
-        <div class="carrinho__sacola">
-          <div class="carrinho__cabecalho">
-            <p class="carrinho__titulo">Sacola</p>
-            <p class="carrinho__texto">
-              Agora produtos em estoque você retira em loja em até 4 horas e
-              ainda ganha
-              <span class="carrinho__texto--verde"
-                >15% OFF em uma nova compra</span
-              >
-              no ato da retirada.
-              <span class="carrinho__texto-negrito"
-                >Selecione na etapa de entrega.</span
-              >
-            </p>
-          </div>
-          <table class="tabela">
-            <tbody>
-              <tr class="tabela__subtitulos">
-                <th class="tabela__subtitulo tabela__subtitulo--produto">
-                  Produtos
-                </th>
-                <th class="tabela__subtitulo">Valor</th>
-                <th class="tabela__subtitulo">Quantidade</th>
-                <th class="tabela__subtitulo">Total</th>
-              </tr>
-              <tr class="tabela__container-produto">
-                <td class="tabela__produto">
-                  <div class="tabela__imagem">
-                    <img
-                      src="https://lojausereserva.vtexassets.com/arquivos/ids/8666577-800-auto?v=638579425321130000&width=800&height=auto&aspect=true"
-                      alt="jaqueta verde escuro"
-                    />
-                  </div>
-                  <div class="tabela__info-produto">
-                    <p class="tabela__nome-produto">
-                      <span class="carrinho__texto-negrito"
-                        >Jaqueta college couro special player</span
-                      >
-                    </p>
-                    <p>
-                      <span class="carrinho__texto-negrito">Tamanho:</span> GG
-                    </p>
-                    <p>
-                      <span class="carrinho__texto-negrito">Cor:</span> Branco
-                    </p>
-                  </div>
-                </td>
-
-                <td class="tabela__preco-unitario">
-                  <p>R$ 7.799,00</p>
-                </td>
-                <td class="tabela__container-controles">
-                  <div class="tabela__controles">
-                    <form action>
-                      <button class="tabela__controle"><span>-</span></button>
-                    </form>
-                    <p>1</p>
-                    <form action>
-                      <button class="tabela__controle"><span>+</span></button>
-                    </form>
-                  </div>
-                </td>
-                <td class="tabela__preco-unitario">
-                  <p>R$ 7.799,00</p>
-                </td>
-              </tr>
-              <tr class="tabela__container-produto">
-                <td class="tabela__produto">
-                  <div class="tabela__imagem">
-                    <img
-                      src="https://lojausereserva.vtexassets.com/arquivos/ids/8666577-800-auto?v=638579425321130000&width=800&height=auto&aspect=true"
-                      alt="jaqueta verde escuro"
-                    />
-                  </div>
-                  <div class="tabela__info-produto">
-                    <p class="tabela__nome-produto">
-                      <span class="carrinho__texto-negrito"
-                        >Jaqueta college couro special player</span
-                      >
-                    </p>
-                    <p>
-                      <span class="carrinho__texto-negrito">Tamanho:</span> GG
-                    </p>
-                    <p>
-                      <span class="carrinho__texto-negrito">Cor:</span> Branco
-                    </p>
-                  </div>
-                </td>
-
-                <td class="tabela__preco-unitario">
-                  <p>R$ 7.799,00</p>
-                </td>
-                <td class="tabela__container-controles">
-                  <div class="tabela__controles">
-                    <form action>
-                      <button class="tabela__controle"><span>-</span></button>
-                    </form>
-                    <p>1</p>
-                    <form action>
-                      <button class="tabela__controle"><span>+</span></button>
-                    </form>
-                  </div>
-                </td>
-                <td class="tabela__preco-unitario">
-                  <p>R$ 7.799,00</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="carrinho__qntd">
-          <div class="carrinho__qntd-caixa">
-            <p class="carrinho__texto">Quantidade de Produtos</p>
-            <p class="carrinho__texto">2</p>
-          </div>
-          <div class="carrinho__qntd-caixa">
-            <p class="carrinho__texto">Total</p>
-            <p class="carrinho__texto">R$ 7.799<sup>,00</sup></p>
-          </div>
-          
-            <a class="botao botao--verde botao--carrinho" href="/checkout.html">
-              IR AO CHECKOUT
-          </a>
-         
+      <section class="minha-conta">
+        <div class="minha-conta__caixa">
+            <div>
+              <p class="minha-conta__titulo">Dados pessoais</p>
+            </div>
+            <div>
+              <div class="minha-conta__inputs">
+                <div class="checkout__endereco-item minha-conta__endereco-item">
+                  <label class="checkout__label minha-conta__label" for="complemento">Nome</label>
+                  <input class="checkout__input minha-conta__input" name="nome" type="text" />
+                </div>
+                <div class="checkout__endereco-item minha-conta__endereco-item">
+                  <label class="checkout__label minha-conta__label" for="complemento">Sobrenome</label>
+                  <input class="checkout__input minha-conta__input" name="nome" type="text" />
+                </div>
+                <div class="checkout__endereco-item minha-conta__endereco-item minha-conta__endereco-item--email">
+                  <label class="checkout__label minha-conta__label" for="email">E-mail</label>
+                  <input class="checkout__input minha-conta__input" name="email" type="email" />
+                </div>
+                <div class="checkout__endereco-item minha-conta__endereco-item">
+                  <label class="checkout__label minha-conta__label" for="cpf">CPF</label>
+                  <input class="checkout__input minha-conta__input" name="cpf" type="number" />
+                </div>
+                <div class="checkout__endereco-item minha-conta__endereco-item">
+                  <label class="checkout__label minha-conta__label" for="genero">Gênero</label>
+                  <input class="checkout__input minha-conta__input" name="genero" type="text" />
+                </div>
+                <div class="checkout__endereco-item minha-conta__endereco-item">
+                  <label class="checkout__label minha-conta__label" for="data-nascimento">Data de Nascimento</label>
+                  <input class="checkout__input minha-conta__input" name="data-nascimento" type="text" />
+                </div>
+                <div class="checkout__endereco-item minha-conta__endereco-item">
+                  <label class="checkout__label minha-conta__label" for="phone">Número</label>
+                  <input class="checkout__input minha-conta__input" name="phone" type="text" />
+                </div>
+                <button class="minha-conta__botao">SALVAR ALTERAÇÕES</button>
+              </div>
+            </div>
         </div>
       </section>
     </main>

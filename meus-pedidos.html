@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <header class="cabecalho cabecalho--carrinho">
+    <header class="cabecalho">
       <div class="cabecalho__menu">
         <img
           class="cabecalho__menu-sanduiche"
@@ -607,131 +607,89 @@
       </div>
     </header>
     <main>
-      <section class="carrinho">
-        <div class="carrinho__sacola">
-          <div class="carrinho__cabecalho">
-            <p class="carrinho__titulo">Sacola</p>
-            <p class="carrinho__texto">
-              Agora produtos em estoque você retira em loja em até 4 horas e
-              ainda ganha
-              <span class="carrinho__texto--verde"
-                >15% OFF em uma nova compra</span
-              >
-              no ato da retirada.
-              <span class="carrinho__texto-negrito"
-                >Selecione na etapa de entrega.</span
-              >
-            </p>
+      <section class="meus-pedidos">
+        <div class="meus-pedidos__caixa">
+          <div>
+            <p class="meus-pedidos__titulo">Meus pedidos</p>
           </div>
-          <table class="tabela">
-            <tbody>
-              <tr class="tabela__subtitulos">
-                <th class="tabela__subtitulo tabela__subtitulo--produto">
-                  Produtos
-                </th>
-                <th class="tabela__subtitulo">Valor</th>
-                <th class="tabela__subtitulo">Quantidade</th>
-                <th class="tabela__subtitulo">Total</th>
-              </tr>
-              <tr class="tabela__container-produto">
-                <td class="tabela__produto">
-                  <div class="tabela__imagem">
-                    <img
-                      src="https://lojausereserva.vtexassets.com/arquivos/ids/8666577-800-auto?v=638579425321130000&width=800&height=auto&aspect=true"
-                      alt="jaqueta verde escuro"
-                    />
+          <div class="meus-pedidos__pedidos">
+            <div class="meus-pedidos__pedido">
+                <div class="meus-pedidos__pedido-cabecalho">
+                    <div>
+                        <p class="meus-pedidos__subtitulo">Data do pedido</p>
+                        <p>01/08/24</p>
+                    </div>
+                    <div>
+                        <p class="meus-pedidos__subtitulo">Total</p>
+                        <p>R$ 7.799,00</p>
+                    </div>
+                    <div>
+                        <p class="meus-pedidos__subtitulo">Número do pedido</p>
+                        <p>735468131</p>
+                    </div>
+                </div>
+                <div class="tabela__produto meus-pedidos__produto">
+                    <div class="tabela__imagem">
+                      <img
+                        src="https://lojausereserva.vtexassets.com/arquivos/ids/8666577-800-auto?v=638579425321130000&width=800&height=auto&aspect=true"
+                        alt="jaqueta verde escuro"
+                      />
+                    </div>
+                    <div class="tabela__info-produto meus-pedidos__info-produto">
+                      <p class="tabela__nome-produto">
+                        <span class="carrinho__texto-negrito"
+                          >Jaqueta college couro special player</span
+                        >
+                      </p>
+                      <p>
+                        <span class="carrinho__texto-negrito">Tamanho:</span> GG
+                      </p>
+                      <p>
+                        <span class="carrinho__texto-negrito">Cor:</span> Branco
+                      </p>
+                    </div>
                   </div>
-                  <div class="tabela__info-produto">
-                    <p class="tabela__nome-produto">
-                      <span class="carrinho__texto-negrito"
-                        >Jaqueta college couro special player</span
-                      >
-                    </p>
-                    <p>
-                      <span class="carrinho__texto-negrito">Tamanho:</span> GG
-                    </p>
-                    <p>
-                      <span class="carrinho__texto-negrito">Cor:</span> Branco
-                    </p>
-                  </div>
-                </td>
-
-                <td class="tabela__preco-unitario">
-                  <p>R$ 7.799,00</p>
-                </td>
-                <td class="tabela__container-controles">
-                  <div class="tabela__controles">
-                    <form action>
-                      <button class="tabela__controle"><span>-</span></button>
-                    </form>
-                    <p>1</p>
-                    <form action>
-                      <button class="tabela__controle"><span>+</span></button>
-                    </form>
-                  </div>
-                </td>
-                <td class="tabela__preco-unitario">
-                  <p>R$ 7.799,00</p>
-                </td>
-              </tr>
-              <tr class="tabela__container-produto">
-                <td class="tabela__produto">
-                  <div class="tabela__imagem">
-                    <img
-                      src="https://lojausereserva.vtexassets.com/arquivos/ids/8666577-800-auto?v=638579425321130000&width=800&height=auto&aspect=true"
-                      alt="jaqueta verde escuro"
-                    />
-                  </div>
-                  <div class="tabela__info-produto">
-                    <p class="tabela__nome-produto">
-                      <span class="carrinho__texto-negrito"
-                        >Jaqueta college couro special player</span
-                      >
-                    </p>
-                    <p>
-                      <span class="carrinho__texto-negrito">Tamanho:</span> GG
-                    </p>
-                    <p>
-                      <span class="carrinho__texto-negrito">Cor:</span> Branco
-                    </p>
-                  </div>
-                </td>
-
-                <td class="tabela__preco-unitario">
-                  <p>R$ 7.799,00</p>
-                </td>
-                <td class="tabela__container-controles">
-                  <div class="tabela__controles">
-                    <form action>
-                      <button class="tabela__controle"><span>-</span></button>
-                    </form>
-                    <p>1</p>
-                    <form action>
-                      <button class="tabela__controle"><span>+</span></button>
-                    </form>
-                  </div>
-                </td>
-                <td class="tabela__preco-unitario">
-                  <p>R$ 7.799,00</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="carrinho__qntd">
-          <div class="carrinho__qntd-caixa">
-            <p class="carrinho__texto">Quantidade de Produtos</p>
-            <p class="carrinho__texto">2</p>
+            </div>
           </div>
-          <div class="carrinho__qntd-caixa">
-            <p class="carrinho__texto">Total</p>
-            <p class="carrinho__texto">R$ 7.799<sup>,00</sup></p>
+          <div class="meus-pedidos__pedidos">
+            <div class="meus-pedidos__pedido">
+                <div class="meus-pedidos__pedido-cabecalho">
+                    <div>
+                        <p class="meus-pedidos__subtitulo">Data do pedido</p>
+                        <p>01/08/24</p>
+                    </div>
+                    <div>
+                        <p class="meus-pedidos__subtitulo">Total</p>
+                        <p>R$ 7.799,00</p>
+                    </div>
+                    <div>
+                        <p class="meus-pedidos__subtitulo">Número do pedido</p>
+                        <p>735468131</p>
+                    </div>
+                </div>
+                <div class="tabela__produto meus-pedidos__produto">
+                    <div class="tabela__imagem">
+                      <img
+                        src="https://lojausereserva.vtexassets.com/arquivos/ids/8666577-800-auto?v=638579425321130000&width=800&height=auto&aspect=true"
+                        alt="jaqueta verde escuro"
+                      />
+                    </div>
+                    <div class="tabela__info-produto meus-pedidos__info-produto">
+                      <p class="tabela__nome-produto">
+                        <span class="carrinho__texto-negrito"
+                          >Jaqueta college couro special player</span
+                        >
+                      </p>
+                      <p>
+                        <span class="carrinho__texto-negrito">Tamanho:</span> GG
+                      </p>
+                      <p>
+                        <span class="carrinho__texto-negrito">Cor:</span> Branco
+                      </p>
+                    </div>
+                  </div>
+            </div>
           </div>
-          
-            <a class="botao botao--verde botao--carrinho" href="/checkout.html">
-              IR AO CHECKOUT
-          </a>
-         
         </div>
       </section>
     </main>
