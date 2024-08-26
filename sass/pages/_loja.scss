@@ -284,6 +284,22 @@
     aspect-ratio: 478/500;
     overflow: hidden;
   }
+  &__botao-form{
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+    right: 7px;
+   & button{
+    width: 100%;
+    padding: 1.6rem;
+    background-color: $cor-branca;
+    border: 0;
+    cursor: pointer;
+    &:hover{
+      transform: scale(1.01);
+    }
+   }
+  }
   &__imagem {
     position: absolute;
     max-width: 57.6rem;
